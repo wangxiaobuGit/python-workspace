@@ -202,8 +202,268 @@
     </div>
 </section>
 
-<!-- 最新工具 -->
+<!-- GitHub 今日热榜 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-github text-dark me-2"></i>GitHub 今日热榜
+                </h2>
+                <p class="text-center text-muted">发现最热门的开源项目</p>
+            </div>
+        </div>
+        
+        {% if github_trending and github_trending.daily %}
+        <div class="row g-4">
+            {% for repo in github_trending.daily[:6] %}
+            <div class="col-lg-6">
+                <div class="card github-card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="{{ repo.owner.avatar_url }}" alt="{{ repo.owner.login }}" 
+                                 class="rounded-circle me-3" width="40" height="40">
+                            <div class="flex-grow-1">
+                                <h6 class="card-title mb-1">
+                                    <a href="{{ repo.url }}" target="_blank" class="text-decoration-none">
+                                        {{ repo.full_name }}
+                                    </a>
+                                </h6>
+                                <p class="card-text text-muted small mb-2">{{ repo.description[:80] }}{% if repo.description|length > 80 %}...{% endif %}</p>
+                                <div class="d-flex align-items-center gap-3 small text-muted">
+                                    <span><i class="bi bi-star-fill text-warning me-1"></i>{{ repo.stars }}</span>
+                                    <span><i class="bi bi-diagram-3 me-1"></i>{{ repo.forks }}</span>
+                                    {% if repo.language %}
+                                    <span class="badge bg-secondary">{{ repo.language }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-5">
+            <i class="bi bi-github display-1 text-muted"></i>
+            <p class="text-muted mt-3">GitHub热榜数据加载中...</p>
+            <button class="btn btn-primary" onclick="location.reload()">刷新页面</button>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- 中文工具专区 -->
 <section class="py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-translate text-primary me-2"></i>中文工具专区
+                </h2>
+                <p class="text-center text-muted">专为中文用户打造的优质AI工具</p>
+            </div>
+        </div>
+        
+        {% if chinese_tools %}
+        <div class="row g-4">
+            {% for tool in chinese_tools %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card tool-card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="tool-logo me-3"
+                                 onerror="this.src='https://via.placeholder.com/48'">
+                            <div>
+                                <h6 class="card-title mb-1">{{ tool.name }}</h6>
+                                <small class="text-muted">{{ tool.category }}</small>
+                            </div>
+                        </div>
+                        
+                        <p class="card-text text-muted small">{{ tool.description[:60] }}{% if tool.description|length > 60 %}...{% endif %}</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="rating">
+                                {% for i in range(5) %}
+                                    {% if i < tool.rating %}
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    {% else %}
+                                        <i class="bi bi-star text-muted"></i>
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="ms-1 text-muted">{{ tool.rating }}</span>
+                            </div>
+                            <div>
+                                <a href="{{ tool.url }}" target="_blank" class="btn btn-sm btn-primary">
+                                    访问
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- 开发者工具 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-code-slash text-success me-2"></i>开发者工具
+                </h2>
+                <p class="text-center text-muted">提升开发效率的必备工具</p>
+            </div>
+        </div>
+        
+        {% if dev_tools %}
+        <div class="row g-4">
+            {% for tool in dev_tools %}
+            <div class="col-lg-4 col-md-6">
+                <div class="card tool-card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="tool-logo me-3"
+                                 onerror="this.src='https://via.placeholder.com/48'">
+                            <div>
+                                <h6 class="card-title mb-1">{{ tool.name }}</h6>
+                                <small class="text-muted">{{ tool.category }}</small>
+                            </div>
+                        </div>
+                        
+                        <p class="card-text text-muted small">{{ tool.description[:60] }}{% if tool.description|length > 60 %}...{% endif %}</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="rating">
+                                {% for i in range(5) %}
+                                    {% if i < tool.rating %}
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    {% else %}
+                                        <i class="bi bi-star text-muted"></i>
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="ms-1 text-muted">{{ tool.rating }}</span>
+                            </div>
+                            <div>
+                                <a href="{{ tool.url }}" target="_blank" class="btn btn-sm btn-success">
+                                    访问
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- 实用内容推荐 -->
+<section class="py-5">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-collection text-info me-2"></i>实用内容推荐
+                </h2>
+                <p class="text-center text-muted">精选的实用平台和工具</p>
+            </div>
+        </div>
+        
+        <!-- 视频平台 -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h4 class="mb-3"><i class="bi bi-play-circle me-2"></i>视频平台</h4>
+            </div>
+            {% if video_platforms %}
+            {% for platform in video_platforms %}
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card platform-card h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ platform.logo }}" alt="{{ platform.name }}" class="platform-logo mb-2"
+                             onerror="this.src='https://via.placeholder.com/32'">
+                        <h6 class="card-title">{{ platform.name }}</h6>
+                        <a href="{{ platform.url }}" target="_blank" class="btn btn-sm btn-outline-primary">访问</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        
+        <!-- 音乐平台 -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h4 class="mb-3"><i class="bi bi-music-note me-2"></i>音乐平台</h4>
+            </div>
+            {% if music_platforms %}
+            {% for platform in music_platforms %}
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card platform-card h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ platform.logo }}" alt="{{ platform.name }}" class="platform-logo mb-2"
+                             onerror="this.src='https://via.placeholder.com/32'">
+                        <h6 class="card-title">{{ platform.name }}</h6>
+                        <a href="{{ platform.url }}" target="_blank" class="btn btn-sm btn-outline-primary">访问</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        
+        <!-- 文档笔记 -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h4 class="mb-3"><i class="bi bi-file-text me-2"></i>文档笔记</h4>
+            </div>
+            {% if doc_tools %}
+            {% for tool in doc_tools %}
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card platform-card h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="platform-logo mb-2"
+                             onerror="this.src='https://via.placeholder.com/32'">
+                        <h6 class="card-title">{{ tool.name }}</h6>
+                        <a href="{{ tool.url }}" target="_blank" class="btn btn-sm btn-outline-primary">访问</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        
+        <!-- 生活实用 -->
+        <div class="row">
+            <div class="col-12">
+                <h4 class="mb-3"><i class="bi bi-house me-2"></i>生活实用</h4>
+            </div>
+            {% if life_tools %}
+            {% for tool in life_tools %}
+            <div class="col-lg-3 col-md-6 mb-3">
+                <div class="card platform-card h-100">
+                    <div class="card-body text-center">
+                        <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="platform-logo mb-2"
+                             onerror="this.src='https://via.placeholder.com/32'">
+                        <h6 class="card-title">{{ tool.name }}</h6>
+                        <a href="{{ tool.url }}" target="_blank" class="btn btn-sm btn-outline-primary">访问</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- 高评分工具 -->
+<section class="py-5 bg-light">
     <div class="container">
         <div class="row mb-4">
             <div class="col-12">

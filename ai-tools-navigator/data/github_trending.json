@@ -1,0 +1,690 @@
+{
+  "daily": [
+    {
+      "id": 1011636536,
+      "name": "ai-pdf-chatbot-langchain",
+      "full_name": "carlnehm/ai-pdf-chatbot-langchain",
+      "description": "暂无描述",
+      "url": "https://github.com/carlnehm/ai-pdf-chatbot-langchain",
+      "stars": 94,
+      "forks": 0,
+      "language": "TypeScript",
+      "created_at": "2025-07-01T05:59:56Z",
+      "updated_at": "2025-07-01T08:25:09Z",
+      "owner": {
+        "login": "carlnehm",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218543457?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011569211,
+      "name": "SICK",
+      "full_name": "Yuri-NagaSaki/SICK",
+      "description": "暂无描述",
+      "url": "https://github.com/Yuri-NagaSaki/SICK",
+      "stars": 15,
+      "forks": 0,
+      "language": "Shell",
+      "created_at": "2025-07-01T03:00:09Z",
+      "updated_at": "2025-07-01T08:08:31Z",
+      "owner": {
+        "login": "Yuri-NagaSaki",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77047823?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011615381,
+      "name": "ttimes-vibecoding-conference",
+      "full_name": "roboco-io/ttimes-vibecoding-conference",
+      "description": "바이브 코딩 학습을 위한 라이브 데모 Todo 앱 프로젝트",
+      "url": "https://github.com/roboco-io/ttimes-vibecoding-conference",
+      "stars": 13,
+      "forks": 8,
+      "language": "Unknown",
+      "created_at": "2025-07-01T05:07:45Z",
+      "updated_at": "2025-07-01T07:22:22Z",
+      "owner": {
+        "login": "roboco-io",
+        "avatar_url": "https://avatars.githubusercontent.com/u/199532361?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011519326,
+      "name": "workshop-agents",
+      "full_name": "jggomez/workshop-agents",
+      "description": "暂无描述",
+      "url": "https://github.com/jggomez/workshop-agents",
+      "stars": 11,
+      "forks": 0,
+      "language": "TypeScript",
+      "created_at": "2025-07-01T00:29:52Z",
+      "updated_at": "2025-07-01T01:31:28Z",
+      "owner": {
+        "login": "jggomez",
+        "avatar_url": "https://avatars.githubusercontent.com/u/661231?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011599313,
+      "name": "POS",
+      "full_name": "nguyenhoanghai1605/POS",
+      "description": "Look up the list of diamonds, Sign up for gift certificates.",
+      "url": "https://github.com/nguyenhoanghai1605/POS",
+      "stars": 8,
+      "forks": 1,
+      "language": "JavaScript",
+      "created_at": "2025-07-01T04:28:11Z",
+      "updated_at": "2025-07-01T07:48:57Z",
+      "owner": {
+        "login": "nguyenhoanghai1605",
+        "avatar_url": "https://avatars.githubusercontent.com/u/21367266?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011646266,
+      "name": "AVDNet",
+      "full_name": "Oksta1002/AVDNet",
+      "description": "[SPL-2025] Adaptive Video Demoiréing Network with Subtraction-Guided Alignment",
+      "url": "https://github.com/Oksta1002/AVDNet",
+      "stars": 8,
+      "forks": 0,
+      "language": "Unknown",
+      "created_at": "2025-07-01T06:19:48Z",
+      "updated_at": "2025-07-01T07:58:35Z",
+      "owner": {
+        "login": "Oksta1002",
+        "avatar_url": "https://avatars.githubusercontent.com/u/129856927?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011642201,
+      "name": "RBU_NGP_React_Node_July2025",
+      "full_name": "SumeetWajpe/RBU_NGP_React_Node_July2025",
+      "description": "暂无描述",
+      "url": "https://github.com/SumeetWajpe/RBU_NGP_React_Node_July2025",
+      "stars": 6,
+      "forks": 0,
+      "language": "HTML",
+      "created_at": "2025-07-01T06:11:57Z",
+      "updated_at": "2025-07-01T08:24:23Z",
+      "owner": {
+        "login": "SumeetWajpe",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25472458?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011540953,
+      "name": "agsb1",
+      "full_name": "fplotkq6102/agsb1",
+      "description": "暂无描述",
+      "url": "https://github.com/fplotkq6102/agsb1",
+      "stars": 5,
+      "forks": 0,
+      "language": "Python",
+      "created_at": "2025-07-01T01:37:30Z",
+      "updated_at": "2025-07-01T01:39:14Z",
+      "owner": {
+        "login": "fplotkq6102",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218697567?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011536967,
+      "name": "SCRM",
+      "full_name": "yuanhusmart/SCRM",
+      "description": "基于企业微信的SCRM系统，整合deepseek深度会话分析。",
+      "url": "https://github.com/yuanhusmart/SCRM",
+      "stars": 5,
+      "forks": 1,
+      "language": "PHP",
+      "created_at": "2025-07-01T01:25:11Z",
+      "updated_at": "2025-07-01T07:14:54Z",
+      "owner": {
+        "login": "yuanhusmart",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218209836?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011541051,
+      "name": "agsb3",
+      "full_name": "fplotkq6102/agsb3",
+      "description": "暂无描述",
+      "url": "https://github.com/fplotkq6102/agsb3",
+      "stars": 5,
+      "forks": 0,
+      "language": "Python",
+      "created_at": "2025-07-01T01:37:46Z",
+      "updated_at": "2025-07-01T01:39:14Z",
+      "owner": {
+        "login": "fplotkq6102",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218697567?v=4"
+      },
+      "topics": []
+    }
+  ],
+  "topics": {
+    "artificial-intelligence": [
+      {
+        "id": 1009618138,
+        "name": "alphagenome",
+        "full_name": "lucidrains/alphagenome",
+        "description": "Implementation of AlphaGenome, Deepmind's updated genomic attention model",
+        "url": "https://github.com/lucidrains/alphagenome",
+        "stars": 42,
+        "language": "Python",
+        "topics": [
+          "artificial-intelligence",
+          "attention-mechanisms",
+          "deep-learning",
+          "genomics",
+          "splicing",
+          "transformers"
+        ]
+      },
+      {
+        "id": 1008646175,
+        "name": "amplify-pytorch",
+        "full_name": "lucidrains/amplify-pytorch",
+        "description": "Implementation of Amplify, Actionless Motion Priors for Robot Learning from Videos",
+        "url": "https://github.com/lucidrains/amplify-pytorch",
+        "stars": 20,
+        "language": "Python",
+        "topics": [
+          "artificial-intelligence",
+          "behavioral-cloning",
+          "deep-learning"
+        ]
+      },
+      {
+        "id": 1009833597,
+        "name": "Mental_Health_Story_Analyzer",
+        "full_name": "11SShukla/Mental_Health_Story_Analyzer",
+        "description": "This project is an AI-powered NLP pipeline that analyzes user-written stories to detect emotions.",
+        "url": "https://github.com/11SShukla/Mental_Health_Story_Analyzer",
+        "stars": 2,
+        "language": "Jupyter Notebook",
+        "topics": [
+          "ann",
+          "artificial-intelligence",
+          "deep-learning",
+          "keras",
+          "machine-learning",
+          "nlp",
+          "python",
+          "streamlit",
+          "tensorflow"
+        ]
+      }
+    ],
+    "machine-learning": [
+      {
+        "id": 1010718807,
+        "name": "AI-Powered-Ticket-Routing-SLA-Breach-Prediction-in-JIRA",
+        "full_name": "aroojjaved93/AI-Powered-Ticket-Routing-SLA-Breach-Prediction-in-JIRA",
+        "description": "A fully working Python-based automation system to streamline technical support workflows using AI. This project includes a JIRA-integrated ticket routing engine, SLA breach predictor, and real-time API—all with dummy data and automation rules, ready for demonstration and adaptation.",
+        "url": "https://github.com/aroojjaved93/AI-Powered-Ticket-Routing-SLA-Breach-Prediction-in-JIRA",
+        "stars": 11,
+        "language": "Python",
+        "topics": [
+          "ai-support-tools",
+          "flask",
+          "jira-automation",
+          "machine-learning",
+          "nocode",
+          "python-api",
+          "sla-prediction",
+          "technical-support",
+          "ticket-routing",
+          "workflow-automation"
+        ]
+      },
+      {
+        "id": 1010648306,
+        "name": "three-mlagents",
+        "full_name": "lukehollis/three-mlagents",
+        "description": "Three.js + FastAPI implementation of Unity's ML-Agents framework ",
+        "url": "https://github.com/lukehollis/three-mlagents",
+        "stars": 4,
+        "language": "JavaScript",
+        "topics": [
+          "deep-learning",
+          "deep-reinforcement-learning",
+          "machine-learning",
+          "neural-networks",
+          "reinforcement-learning",
+          "three-js",
+          "threejs"
+        ]
+      },
+      {
+        "id": 1010012486,
+        "name": "CHULA",
+        "full_name": "kaopanboonyuen/CHULA",
+        "description": "CHULA: Custom Heuristic Uncertainty-guided Loss for Accurate Land Title Deed Segmentation",
+        "url": "https://github.com/kaopanboonyuen/CHULA",
+        "stars": 4,
+        "language": "Python",
+        "topics": [
+          "ai",
+          "computer-vision",
+          "deep-learning",
+          "image-processing",
+          "image-recognition",
+          "loss-functions",
+          "machine-learning",
+          "yolo"
+        ]
+      }
+    ],
+    "deep-learning": [
+      {
+        "id": 1009618138,
+        "name": "alphagenome",
+        "full_name": "lucidrains/alphagenome",
+        "description": "Implementation of AlphaGenome, Deepmind's updated genomic attention model",
+        "url": "https://github.com/lucidrains/alphagenome",
+        "stars": 42,
+        "language": "Python",
+        "topics": [
+          "artificial-intelligence",
+          "attention-mechanisms",
+          "deep-learning",
+          "genomics",
+          "splicing",
+          "transformers"
+        ]
+      },
+      {
+        "id": 1008646175,
+        "name": "amplify-pytorch",
+        "full_name": "lucidrains/amplify-pytorch",
+        "description": "Implementation of Amplify, Actionless Motion Priors for Robot Learning from Videos",
+        "url": "https://github.com/lucidrains/amplify-pytorch",
+        "stars": 20,
+        "language": "Python",
+        "topics": [
+          "artificial-intelligence",
+          "behavioral-cloning",
+          "deep-learning"
+        ]
+      },
+      {
+        "id": 1009242464,
+        "name": "Virtual_Try_Off",
+        "full_name": "Phoenix-95107/Virtual_Try_Off",
+        "description": "Get Clothes from image",
+        "url": "https://github.com/Phoenix-95107/Virtual_Try_Off",
+        "stars": 17,
+        "language": "Python",
+        "topics": [
+          "deep-learning",
+          "e-commerce",
+          "huggingface-transformers",
+          "image-generation",
+          "image-to-image",
+          "mask",
+          "python",
+          "qwen2-5",
+          "segmentation",
+          "stable-diffusion",
+          "virtual-try-off",
+          "virtual-try-on"
+        ]
+      }
+    ],
+    "python": [
+      {
+        "id": 1010292203,
+        "name": "NoDPI4Android",
+        "full_name": "GVCoder09/NoDPI4Android",
+        "description": "NoDPI4Android is an Android app for bypassing the DPI (Deep Packet Inspection) ",
+        "url": "https://github.com/GVCoder09/NoDPI4Android",
+        "stars": 44,
+        "language": "Python",
+        "topics": [
+          "android",
+          "dpi",
+          "dpi-bypassing",
+          "kivy",
+          "kivymd",
+          "nodpi",
+          "proxy",
+          "python",
+          "python-for-android"
+        ]
+      },
+      {
+        "id": 1010818726,
+        "name": "Plex-Library-Completer_P",
+        "full_name": "lelus78/Plex-Library-Completer_P",
+        "description": "Completer automatico per la tua libreria Plex: sincronizza playlist musicali, genera statistiche e aggiorna contenuti in modo semplice tramite CLI o Docker.",
+        "url": "https://github.com/lelus78/Plex-Library-Completer_P",
+        "stars": 37,
+        "language": "Python",
+        "topics": [
+          "automation",
+          "cli",
+          "doker",
+          "music-satistics",
+          "playlist-ai",
+          "playlist-creator",
+          "playlist-sync",
+          "plex",
+          "plex-library",
+          "python"
+        ]
+      },
+      {
+        "id": 1009242464,
+        "name": "Virtual_Try_Off",
+        "full_name": "Phoenix-95107/Virtual_Try_Off",
+        "description": "Get Clothes from image",
+        "url": "https://github.com/Phoenix-95107/Virtual_Try_Off",
+        "stars": 17,
+        "language": "Python",
+        "topics": [
+          "deep-learning",
+          "e-commerce",
+          "huggingface-transformers",
+          "image-generation",
+          "image-to-image",
+          "mask",
+          "python",
+          "qwen2-5",
+          "segmentation",
+          "stable-diffusion",
+          "virtual-try-off",
+          "virtual-try-on"
+        ]
+      }
+    ],
+    "javascript": [
+      {
+        "id": 1009229429,
+        "name": "SmartAI-Trading-Bot",
+        "full_name": "DjorvithrjwNP/SmartAI-Trading-Bot",
+        "description": "Trading Smart AI Bot for Ethereum blockchain",
+        "url": "https://github.com/DjorvithrjwNP/SmartAI-Trading-Bot",
+        "stars": 51,
+        "language": "Unknown",
+        "topics": [
+          "ai",
+          "blockchain",
+          "bot",
+          "btc",
+          "crypto-bot",
+          "decentralized-exchanges",
+          "dex",
+          "eth",
+          "ethereum",
+          "javascript",
+          "mempool",
+          "mev",
+          "nodejs",
+          "smart",
+          "smart-contracts",
+          "solana",
+          "solidity"
+        ]
+      },
+      {
+        "id": 1008105621,
+        "name": "soundz",
+        "full_name": "kazewaze/soundz",
+        "description": "Sound Effects Wrapper for Components",
+        "url": "https://github.com/kazewaze/soundz",
+        "stars": 17,
+        "language": "TypeScript",
+        "topics": [
+          "accessibility",
+          "batteries-included",
+          "component",
+          "component-library",
+          "components",
+          "customizable",
+          "javascript",
+          "js",
+          "jsx",
+          "next",
+          "nextjs",
+          "npm-package",
+          "react",
+          "reactjs",
+          "sound",
+          "sound-effects",
+          "sounds",
+          "ts",
+          "tsx",
+          "typescript"
+        ]
+      },
+      {
+        "id": 1009836317,
+        "name": "drizzle-plus",
+        "full_name": "alloc/drizzle-plus",
+        "description": "A collection of useful utilities and extensions for Drizzle ORM",
+        "url": "https://github.com/alloc/drizzle-plus",
+        "stars": 8,
+        "language": "TypeScript",
+        "topics": [
+          "drizzle-orm",
+          "javascript",
+          "nodejs",
+          "typescript"
+        ]
+      }
+    ],
+    "react": [
+      {
+        "id": 1008105621,
+        "name": "soundz",
+        "full_name": "kazewaze/soundz",
+        "description": "Sound Effects Wrapper for Components",
+        "url": "https://github.com/kazewaze/soundz",
+        "stars": 17,
+        "language": "TypeScript",
+        "topics": [
+          "accessibility",
+          "batteries-included",
+          "component",
+          "component-library",
+          "components",
+          "customizable",
+          "javascript",
+          "js",
+          "jsx",
+          "next",
+          "nextjs",
+          "npm-package",
+          "react",
+          "reactjs",
+          "sound",
+          "sound-effects",
+          "sounds",
+          "ts",
+          "tsx",
+          "typescript"
+        ]
+      },
+      {
+        "id": 1008373485,
+        "name": "claudecodeui",
+        "full_name": "siteboon/claudecodeui",
+        "description": "Claude Code UI is a web and mobile friendly app UI for Claude Code CLI that allows you to view all Claude code sessions and projects and access them remotely",
+        "url": "https://github.com/siteboon/claudecodeui",
+        "stars": 15,
+        "language": "JavaScript",
+        "topics": [
+          "anthropic",
+          "anthropic-ai",
+          "anthropic-claude",
+          "claude",
+          "claude-api",
+          "claude-code",
+          "claude-code-sdk",
+          "gui",
+          "react",
+          "ui"
+        ]
+      },
+      {
+        "id": 1009747666,
+        "name": "locatr",
+        "full_name": "kadirmetin/locatr",
+        "description": "Real-time family location tracking app with privacy-first approach. Built with React Native, Next.js, and Node.js.",
+        "url": "https://github.com/kadirmetin/locatr",
+        "stars": 13,
+        "language": "TypeScript",
+        "topics": [
+          "expo",
+          "express",
+          "family-safety",
+          "location-tracker",
+          "mapbox",
+          "mobile-app",
+          "mongodb",
+          "monorepo",
+          "nextjs",
+          "privacy-focused",
+          "react",
+          "react-native",
+          "real-time-tracking",
+          "socket-io",
+          "typescript",
+          "web-app"
+        ]
+      }
+    ],
+    "vue": [
+      {
+        "id": 1008658385,
+        "name": "vue-smart-importer",
+        "full_name": "MenasriaMohamed/vue-smart-importer",
+        "description": "VS Code extension that simplifies Vue.js development by providing right-click import functionality for components, composables, and utilities with smart path resolution.",
+        "url": "https://github.com/MenasriaMohamed/vue-smart-importer",
+        "stars": 2,
+        "language": "TypeScript",
+        "topics": [
+          "developer-tools",
+          "import",
+          "javascript",
+          "path-helper",
+          "productivity",
+          "typescript",
+          "vscode-extension",
+          "vue",
+          "vuejs"
+        ]
+      },
+      {
+        "id": 1008687643,
+        "name": "vite-plugin-vue-template-selector",
+        "full_name": "tomheaton/vite-plugin-vue-template-selector",
+        "description": "A Vite plugin for Vue.js that allows dynamic template selection at build time.",
+        "url": "https://github.com/tomheaton/vite-plugin-vue-template-selector",
+        "stars": 2,
+        "language": "TypeScript",
+        "topics": [
+          "plugin",
+          "template-selector",
+          "templates",
+          "typescript",
+          "vite",
+          "vue",
+          "vuejs"
+        ]
+      },
+      {
+        "id": 1010464297,
+        "name": "zap_dashboard",
+        "full_name": "pratik227/zap_dashboard",
+        "description": "A modern, real-time dashboard for managing and analyzing Lightning Network zaps (tips) with Nostr Wallet Connect integration.",
+        "url": "https://github.com/pratik227/zap_dashboard",
+        "stars": 1,
+        "language": "Vue",
+        "topics": [
+          "alby",
+          "analysis",
+          "sats",
+          "vue",
+          "wallet",
+          "zap"
+        ]
+      }
+    ],
+    "nodejs": [
+      {
+        "id": 1009229429,
+        "name": "SmartAI-Trading-Bot",
+        "full_name": "DjorvithrjwNP/SmartAI-Trading-Bot",
+        "description": "Trading Smart AI Bot for Ethereum blockchain",
+        "url": "https://github.com/DjorvithrjwNP/SmartAI-Trading-Bot",
+        "stars": 51,
+        "language": "Unknown",
+        "topics": [
+          "ai",
+          "blockchain",
+          "bot",
+          "btc",
+          "crypto-bot",
+          "decentralized-exchanges",
+          "dex",
+          "eth",
+          "ethereum",
+          "javascript",
+          "mempool",
+          "mev",
+          "nodejs",
+          "smart",
+          "smart-contracts",
+          "solana",
+          "solidity"
+        ]
+      },
+      {
+        "id": 1010539804,
+        "name": "Oroswap-Auto-Bot",
+        "full_name": "vikitoshi/Oroswap-Auto-Bot",
+        "description": "Automated trading bot for OroSwap DEX on Zig Network. This bot performs automated swaps and liquidity operations to earn points and potential airdrops",
+        "url": "https://github.com/vikitoshi/Oroswap-Auto-Bot",
+        "stars": 20,
+        "language": "JavaScript",
+        "topics": [
+          "airdrop",
+          "bot",
+          "nodejs",
+          "oroswap",
+          "oroswap-bot",
+          "testnet"
+        ]
+      },
+      {
+        "id": 1008912915,
+        "name": "BeatDock",
+        "full_name": "lazaroagomez/BeatDock",
+        "description": "🎵 Free, open-source, self-hosted Discord music bot with slash commands and Docker deployment. Features YouTube playback, queue management, and multilingual support.",
+        "url": "https://github.com/lazaroagomez/BeatDock",
+        "stars": 17,
+        "language": "JavaScript",
+        "topics": [
+          "discord",
+          "discord-bot",
+          "discord-js",
+          "lavalink",
+          "music-bot",
+          "nodejs"
+        ]
+      }
+    ]
+  },
+  "last_updated": "2025-07-01T08:31:57.760677"
+}

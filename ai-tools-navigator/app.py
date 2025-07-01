@@ -3,12 +3,23 @@ import json
 import os
 from datetime import datetime
 import uuid
+from github_trending import GitHubTrendingCrawler
+from apscheduler.schedulers.background import BackgroundScheduler
+import atexit
 
 app = Flask(__name__)
 app.secret_key = 'ai-tools-navigator-secret-key-v1-enhanced'
 
 # 数据文件路径
 DATA_FILE = os.path.join(os.path.dirname(__file__), 'data', 'ai_tools.json')
+
+# 初始化GitHub爬虫
+github_crawler = GitHubTrendingCrawler(data_dir=os.path.join(os.path.dirname(__file__), 'data'))
+
+# 初始化定时任务调度器
+scheduler = BackgroundScheduler()
+scheduler.start()
+atexit.register(lambda: scheduler.shutdown())
 
 def load_data():
     """加载 AI 工具数据"""
@@ -42,18 +53,92 @@ def get_statistics():
     }
     return stats
 
+def get_tools_by_category(category_name, limit=None):
+    """根据分类获取工具"""
+    data = load_data()
+    tools = [tool for tool in data['tools'] if tool['category'] == category_name]
+    if limit:
+        tools = tools[:limit]
+    return tools
+
+def get_tools_by_region(region, limit=None):
+    """根据地区获取工具"""
+    data = load_data()
+    tools = [tool for tool in data['tools'] if tool.get('region') == region]
+    if limit:
+        tools = tools[:limit]
+    return tools
+
+def get_featured_tools_by_category(category_name, limit=None):
+    """获取指定分类的推荐工具"""
+    data = load_data()
+    tools = [tool for tool in data['tools'] 
+             if tool['category'] == category_name and tool.get('is_featured', False)]
+    if limit:
+        tools = tools[:limit]
+    return tools
+
+def update_github_trending():
+    """更新GitHub热门数据的定时任务"""
+    try:
+        github_crawler.update_trending_data()
+        print("GitHub热门数据更新成功")
+    except Exception as e:
+        print(f"GitHub热门数据更新失败: {str(e)}")
+
+# 添加定时任务：每6小时更新一次GitHub热门数据
+scheduler.add_job(
+    func=update_github_trending,
+    trigger="interval",
+    hours=6,
+    id='github_trending_job'
+)
+
 @app.route('/')
 def index():
     """首页 - 展示热门 AI 工具"""
     data = load_data()
-    featured_tools = [tool for tool in data['tools'] if tool.get('is_featured', False)]
+    
+    # 热门推荐工具
+    featured_tools = [tool for tool in data['tools'] if tool.get('is_featured', False)][:6]
+    
+    # 最新更新（按评分排序）
     recent_tools = sorted(data['tools'], key=lambda x: x.get('rating', 0), reverse=True)[:6]
+    
+    # 中文工具专区
+    chinese_tools = get_tools_by_category('中文AI工具', limit=6)
+    
+    # 开发者工具
+    dev_tools = get_tools_by_category('开发者工具', limit=6)
+    
+    # 视频平台推荐
+    video_platforms = get_tools_by_category('视频平台', limit=4)
+    
+    # 音乐平台推荐
+    music_platforms = get_tools_by_category('音乐平台', limit=4)
+    
+    # 文档笔记工具
+    doc_tools = get_tools_by_category('文档笔记', limit=4)
+    
+    # 生活实用工具
+    life_tools = get_tools_by_category('生活实用', limit=4)
+    
+    # GitHub热门项目
+    github_trending = github_crawler.load_trending_data()
+    
     categories = data['categories']
     stats = get_statistics()
     
     return render_template('index.html', 
                          featured_tools=featured_tools,
                          recent_tools=recent_tools,
+                         chinese_tools=chinese_tools,
+                         dev_tools=dev_tools,
+                         video_platforms=video_platforms,
+                         music_platforms=music_platforms,
+                         doc_tools=doc_tools,
+                         life_tools=life_tools,
+                         github_trending=github_trending,
                          categories=categories,
                          stats=stats)
 
@@ -225,9 +310,43 @@ def api_random_tools():
     random_tools = random.sample(data['tools'], min(3, len(data['tools'])))
     return jsonify(random_tools)
 
+@app.route('/api/github/trending')
+def api_github_trending():
+    """API: 获取GitHub热门项目"""
+    trending_data = github_crawler.load_trending_data()
+    return jsonify(trending_data)
+
+@app.route('/api/tools/category/<category_name>')
+def api_tools_by_category(category_name):
+    """API: 根据分类获取工具"""
+    limit = request.args.get('limit', type=int)
+    tools = get_tools_by_category(category_name, limit)
+    return jsonify(tools)
+
+@app.route('/api/tools/region/<region>')
+def api_tools_by_region(region):
+    """API: 根据地区获取工具"""
+    limit = request.args.get('limit', type=int)
+    tools = get_tools_by_region(region, limit)
+    return jsonify(tools)
+
+@app.route('/admin/github/update', methods=['POST'])
+def admin_update_github():
+    """管理后台：手动更新GitHub热门数据"""
+    try:
+        success = github_crawler.update_trending_data(force=True)
+        if success:
+            flash('GitHub热门数据更新成功', 'success')
+        else:
+            flash('GitHub热门数据更新失败', 'error')
+    except Exception as e:
+        flash(f'更新失败: {str(e)}', 'error')
+    
+    return redirect(url_for('admin'))
+
 if __name__ == '__main__':
     # 确保数据目录存在
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
     
     # 启动应用
-    app.run(host='0.0.0.0', port=12000, debug=True)
+    app.run(host='0.0.0.0', port=12001, debug=True)

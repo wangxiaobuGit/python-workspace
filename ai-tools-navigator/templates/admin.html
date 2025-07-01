@@ -14,9 +14,16 @@
                 <p class="text-white-50 mb-0">管理 AI 工具数据</p>
             </div>
             <div class="col-md-6 text-md-end">
-                <a href="{{ url_for('admin_add_tool') }}" class="btn btn-success">
-                    <i class="bi bi-plus-circle me-1"></i>添加工具
-                </a>
+                <div class="btn-group" role="group">
+                    <a href="{{ url_for('admin_add_tool') }}" class="btn btn-success">
+                        <i class="bi bi-plus-circle me-1"></i>添加工具
+                    </a>
+                    <form method="POST" action="{{ url_for('admin_update_github') }}" class="d-inline">
+                        <button type="submit" class="btn btn-info">
+                            <i class="bi bi-github me-1"></i>更新GitHub热榜
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

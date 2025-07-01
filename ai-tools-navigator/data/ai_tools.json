@@ -131,6 +131,246 @@
       "rating": 4.3,
       "is_featured": false,
       "logo": "https://runwayml.com/favicon.ico"
+    },
+    {
+      "id": 13,
+      "name": "通义千问",
+      "description": "阿里云推出的大语言模型，支持中文对话、文本生成、代码编写等功能",
+      "url": "https://tongyi.aliyun.com",
+      "category": "中文AI工具",
+      "tags": ["中文对话", "文本生成", "阿里云", "大语言模型"],
+      "rating": 4.5,
+      "is_featured": true,
+      "logo": "https://img.alicdn.com/imgextra/i1/O1CN01KKes9j1YQq8zYzQqK_!!6000000003049-2-tps-512-512.png",
+      "region": "中国"
+    },
+    {
+      "id": 14,
+      "name": "智谱清言",
+      "description": "智谱AI推出的对话式AI助手，基于GLM模型，支持中文理解和生成",
+      "url": "https://chatglm.cn",
+      "category": "中文AI工具",
+      "tags": ["中文对话", "GLM模型", "智谱AI", "问答"],
+      "rating": 4.4,
+      "is_featured": true,
+      "logo": "https://chatglm.cn/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 15,
+      "name": "Kimi.ai",
+      "description": "月之暗面推出的智能助手，支持超长文本处理和多轮对话",
+      "url": "https://kimi.moonshot.cn",
+      "category": "中文AI工具",
+      "tags": ["长文本", "对话", "月之暗面", "智能助手"],
+      "rating": 4.6,
+      "is_featured": true,
+      "logo": "https://kimi.moonshot.cn/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 16,
+      "name": "魔搭社区",
+      "description": "阿里云推出的AI模型社区，提供丰富的预训练模型和开发工具",
+      "url": "https://modelscope.cn",
+      "category": "开发者工具",
+      "tags": ["模型社区", "预训练模型", "开发工具", "阿里云"],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://modelscope.cn/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 17,
+      "name": "文心一言",
+      "description": "百度推出的知识增强大语言模型，支持文学创作、商业文案、数理推算等",
+      "url": "https://yiyan.baidu.com",
+      "category": "中文AI工具",
+      "tags": ["百度", "知识增强", "文学创作", "商业文案"],
+      "rating": 4.2,
+      "is_featured": true,
+      "logo": "https://nlp-eb.cdn.bcebos.com/logo/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 18,
+      "name": "Bilibili",
+      "description": "中国领先的年轻人文化社区和视频平台，涵盖动画、游戏、科技等内容",
+      "url": "https://www.bilibili.com",
+      "category": "视频平台",
+      "tags": ["视频", "弹幕", "二次元", "学习"],
+      "rating": 4.7,
+      "is_featured": false,
+      "logo": "https://www.bilibili.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 19,
+      "name": "抖音网页版",
+      "description": "抖音短视频平台网页版，随时随地刷短视频",
+      "url": "https://www.douyin.com",
+      "category": "视频平台",
+      "tags": ["短视频", "娱乐", "创作"],
+      "rating": 4.5,
+      "is_featured": false,
+      "logo": "https://www.douyin.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 20,
+      "name": "YouTube镜像",
+      "description": "YouTube视频平台镜像站点，观看海外视频内容",
+      "url": "https://www.youtube.com",
+      "category": "视频平台",
+      "tags": ["视频", "海外", "教育", "娱乐"],
+      "rating": 4.8,
+      "is_featured": false,
+      "logo": "https://www.youtube.com/favicon.ico",
+      "region": "海外"
+    },
+    {
+      "id": 21,
+      "name": "网易云音乐",
+      "description": "网易云音乐网页版，发现音乐，遇见美好",
+      "url": "https://music.163.com",
+      "category": "音乐平台",
+      "tags": ["音乐", "歌单", "评论", "发现"],
+      "rating": 4.6,
+      "is_featured": false,
+      "logo": "https://music.163.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 22,
+      "name": "QQ音乐",
+      "description": "腾讯QQ音乐网页版，海量正版音乐在线试听",
+      "url": "https://y.qq.com",
+      "category": "音乐平台",
+      "tags": ["音乐", "正版", "腾讯", "在线"],
+      "rating": 4.5,
+      "is_featured": false,
+      "logo": "https://y.qq.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 23,
+      "name": "Spotify",
+      "description": "全球领先的音乐流媒体平台",
+      "url": "https://open.spotify.com",
+      "category": "音乐平台",
+      "tags": ["音乐", "流媒体", "播客", "全球"],
+      "rating": 4.7,
+      "is_featured": false,
+      "logo": "https://open.spotify.com/favicon.ico",
+      "region": "海外"
+    },
+    {
+      "id": 24,
+      "name": "语雀",
+      "description": "蚂蚁集团推出的专业云端知识库，支持文档协作和知识管理",
+      "url": "https://www.yuque.com",
+      "category": "文档笔记",
+      "tags": ["知识库", "文档协作", "蚂蚁", "团队"],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://www.yuque.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 25,
+      "name": "腾讯文档",
+      "description": "腾讯推出的在线文档协作平台，支持多人实时编辑",
+      "url": "https://docs.qq.com",
+      "category": "文档笔记",
+      "tags": ["在线文档", "协作", "腾讯", "实时编辑"],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://docs.qq.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 26,
+      "name": "Notion",
+      "description": "集笔记、数据库、项目管理于一体的全能工作空间",
+      "url": "https://www.notion.so",
+      "category": "文档笔记",
+      "tags": ["笔记", "数据库", "项目管理", "工作空间"],
+      "rating": 4.6,
+      "is_featured": false,
+      "logo": "https://www.notion.so/images/favicon.ico",
+      "region": "海外"
+    },
+    {
+      "id": 27,
+      "name": "快递100",
+      "description": "一站式快递查询平台，支持全国主要快递公司",
+      "url": "https://www.kuaidi100.com",
+      "category": "生活实用",
+      "tags": ["快递查询", "物流", "生活服务"],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://www.kuaidi100.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 28,
+      "name": "12306",
+      "description": "中国铁路客户服务中心，火车票预订官方网站",
+      "url": "https://www.12306.cn",
+      "category": "生活实用",
+      "tags": ["火车票", "铁路", "出行", "官方"],
+      "rating": 4.0,
+      "is_featured": false,
+      "logo": "https://www.12306.cn/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 29,
+      "name": "支付宝",
+      "description": "支付宝网页版，便民服务和移动支付平台",
+      "url": "https://www.alipay.com",
+      "category": "生活实用",
+      "tags": ["支付", "便民服务", "蚂蚁", "金融"],
+      "rating": 4.5,
+      "is_featured": false,
+      "logo": "https://www.alipay.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 30,
+      "name": "GitHub",
+      "description": "全球最大的代码托管平台和开发者社区",
+      "url": "https://github.com",
+      "category": "开发者工具",
+      "tags": ["代码托管", "开源", "协作", "开发者"],
+      "rating": 4.8,
+      "is_featured": true,
+      "logo": "https://github.com/favicon.ico",
+      "region": "海外"
+    },
+    {
+      "id": 31,
+      "name": "Gitee",
+      "description": "中国领先的软件开发平台，提供Git代码托管服务",
+      "url": "https://gitee.com",
+      "category": "开发者工具",
+      "tags": ["代码托管", "Git", "开源", "中国"],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://gitee.com/favicon.ico",
+      "region": "中国"
+    },
+    {
+      "id": 32,
+      "name": "Stack Overflow",
+      "description": "全球最大的程序员问答社区",
+      "url": "https://stackoverflow.com",
+      "category": "开发者工具",
+      "tags": ["问答", "编程", "社区", "技术"],
+      "rating": 4.7,
+      "is_featured": false,
+      "logo": "https://stackoverflow.com/favicon.ico",
+      "region": "海外"
     }
   ],
   "categories": [
@@ -163,6 +403,36 @@
       "name": "视频处理",
       "description": "视频编辑、生成和处理的 AI 工具",
       "icon": "🎬"
+    },
+    {
+      "name": "中文AI工具",
+      "description": "专为中文用户打造的AI工具和服务",
+      "icon": "🇨🇳"
+    },
+    {
+      "name": "视频平台",
+      "description": "优质的视频内容平台和社区",
+      "icon": "📺"
+    },
+    {
+      "name": "音乐平台",
+      "description": "在线音乐播放和发现平台",
+      "icon": "🎶"
+    },
+    {
+      "name": "文档笔记",
+      "description": "文档编辑、笔记管理和协作工具",
+      "icon": "📝"
+    },
+    {
+      "name": "生活实用",
+      "description": "日常生活中实用的工具和服务",
+      "icon": "🏠"
+    },
+    {
+      "name": "开发者工具",
+      "description": "面向开发者的工具和平台",
+      "icon": "🛠️"
     }
   ]
 }

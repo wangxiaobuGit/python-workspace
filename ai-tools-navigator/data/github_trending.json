@@ -1,172 +1,172 @@
 {
   "daily": [
     {
-      "id": 1011636536,
-      "name": "ai-pdf-chatbot-langchain",
-      "full_name": "carlnehm/ai-pdf-chatbot-langchain",
+      "id": 1009900539,
+      "name": "claude-code-requirements-builder",
+      "full_name": "rizethereum/claude-code-requirements-builder",
       "description": "暂无描述",
-      "url": "https://github.com/carlnehm/ai-pdf-chatbot-langchain",
-      "stars": 94,
-      "forks": 0,
-      "language": "TypeScript",
-      "created_at": "2025-07-01T05:59:56Z",
-      "updated_at": "2025-07-01T08:25:09Z",
-      "owner": {
-        "login": "carlnehm",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218543457?v=4"
-      },
-      "topics": []
-    },
-    {
-      "id": 1011569211,
-      "name": "SICK",
-      "full_name": "Yuri-NagaSaki/SICK",
-      "description": "暂无描述",
-      "url": "https://github.com/Yuri-NagaSaki/SICK",
-      "stars": 15,
-      "forks": 0,
-      "language": "Shell",
-      "created_at": "2025-07-01T03:00:09Z",
-      "updated_at": "2025-07-01T08:08:31Z",
-      "owner": {
-        "login": "Yuri-NagaSaki",
-        "avatar_url": "https://avatars.githubusercontent.com/u/77047823?v=4"
-      },
-      "topics": []
-    },
-    {
-      "id": 1011615381,
-      "name": "ttimes-vibecoding-conference",
-      "full_name": "roboco-io/ttimes-vibecoding-conference",
-      "description": "바이브 코딩 학습을 위한 라이브 데모 Todo 앱 프로젝트",
-      "url": "https://github.com/roboco-io/ttimes-vibecoding-conference",
-      "stars": 13,
-      "forks": 8,
+      "url": "https://github.com/rizethereum/claude-code-requirements-builder",
+      "stars": 801,
+      "forks": 85,
       "language": "Unknown",
-      "created_at": "2025-07-01T05:07:45Z",
-      "updated_at": "2025-07-01T07:22:22Z",
+      "created_at": "2025-06-27T23:24:02Z",
+      "updated_at": "2025-07-01T08:53:43Z",
       "owner": {
-        "login": "roboco-io",
-        "avatar_url": "https://avatars.githubusercontent.com/u/199532361?v=4"
+        "login": "rizethereum",
+        "avatar_url": "https://avatars.githubusercontent.com/u/212109937?v=4"
       },
       "topics": []
     },
     {
-      "id": 1011519326,
-      "name": "workshop-agents",
-      "full_name": "jggomez/workshop-agents",
-      "description": "暂无描述",
-      "url": "https://github.com/jggomez/workshop-agents",
-      "stars": 11,
-      "forks": 0,
+      "id": 1008688456,
+      "name": "dxt",
+      "full_name": "anthropics/dxt",
+      "description": "Desktop Extensions: One-click local MCP server installation in desktop apps",
+      "url": "https://github.com/anthropics/dxt",
+      "stars": 583,
+      "forks": 34,
       "language": "TypeScript",
-      "created_at": "2025-07-01T00:29:52Z",
-      "updated_at": "2025-07-01T01:31:28Z",
+      "created_at": "2025-06-26T00:15:05Z",
+      "updated_at": "2025-07-01T08:56:03Z",
       "owner": {
-        "login": "jggomez",
-        "avatar_url": "https://avatars.githubusercontent.com/u/661231?v=4"
+        "login": "anthropics",
+        "avatar_url": "https://avatars.githubusercontent.com/u/76263028?v=4"
       },
       "topics": []
     },
     {
-      "id": 1011599313,
-      "name": "POS",
-      "full_name": "nguyenhoanghai1605/POS",
-      "description": "Look up the list of diamonds, Sign up for gift certificates.",
-      "url": "https://github.com/nguyenhoanghai1605/POS",
-      "stars": 8,
-      "forks": 1,
-      "language": "JavaScript",
-      "created_at": "2025-07-01T04:28:11Z",
-      "updated_at": "2025-07-01T07:48:57Z",
-      "owner": {
-        "login": "nguyenhoanghai1605",
-        "avatar_url": "https://avatars.githubusercontent.com/u/21367266?v=4"
-      },
-      "topics": []
-    },
-    {
-      "id": 1011646266,
-      "name": "AVDNet",
-      "full_name": "Oksta1002/AVDNet",
-      "description": "[SPL-2025] Adaptive Video Demoiréing Network with Subtraction-Guided Alignment",
-      "url": "https://github.com/Oksta1002/AVDNet",
-      "stars": 8,
-      "forks": 0,
-      "language": "Unknown",
-      "created_at": "2025-07-01T06:19:48Z",
-      "updated_at": "2025-07-01T07:58:35Z",
-      "owner": {
-        "login": "Oksta1002",
-        "avatar_url": "https://avatars.githubusercontent.com/u/129856927?v=4"
-      },
-      "topics": []
-    },
-    {
-      "id": 1011642201,
-      "name": "RBU_NGP_React_Node_July2025",
-      "full_name": "SumeetWajpe/RBU_NGP_React_Node_July2025",
-      "description": "暂无描述",
-      "url": "https://github.com/SumeetWajpe/RBU_NGP_React_Node_July2025",
-      "stars": 6,
-      "forks": 0,
-      "language": "HTML",
-      "created_at": "2025-07-01T06:11:57Z",
-      "updated_at": "2025-07-01T08:24:23Z",
-      "owner": {
-        "login": "SumeetWajpe",
-        "avatar_url": "https://avatars.githubusercontent.com/u/25472458?v=4"
-      },
-      "topics": []
-    },
-    {
-      "id": 1011540953,
-      "name": "agsb1",
-      "full_name": "fplotkq6102/agsb1",
-      "description": "暂无描述",
-      "url": "https://github.com/fplotkq6102/agsb1",
-      "stars": 5,
-      "forks": 0,
+      "id": 1009335691,
+      "name": "Hunyuan-A13B",
+      "full_name": "Tencent-Hunyuan/Hunyuan-A13B",
+      "description": "Tencent Hunyuan A13B (short as Hunyuan-A13B), an innovative and open-source LLM built on a fine-grained MoE architecture.",
+      "url": "https://github.com/Tencent-Hunyuan/Hunyuan-A13B",
+      "stars": 466,
+      "forks": 47,
       "language": "Python",
-      "created_at": "2025-07-01T01:37:30Z",
-      "updated_at": "2025-07-01T01:39:14Z",
+      "created_at": "2025-06-27T01:02:27Z",
+      "updated_at": "2025-07-01T08:48:48Z",
       "owner": {
-        "login": "fplotkq6102",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218697567?v=4"
+        "login": "Tencent-Hunyuan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/210980732?v=4"
       },
       "topics": []
     },
     {
-      "id": 1011536967,
-      "name": "SCRM",
-      "full_name": "yuanhusmart/SCRM",
-      "description": "基于企业微信的SCRM系统，整合deepseek深度会话分析。",
-      "url": "https://github.com/yuanhusmart/SCRM",
-      "stars": 5,
-      "forks": 1,
-      "language": "PHP",
-      "created_at": "2025-07-01T01:25:11Z",
-      "updated_at": "2025-07-01T07:14:54Z",
-      "owner": {
-        "login": "yuanhusmart",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218209836?v=4"
-      },
-      "topics": []
-    },
-    {
-      "id": 1011541051,
-      "name": "agsb3",
-      "full_name": "fplotkq6102/agsb3",
+      "id": 1008837384,
+      "name": "ccseva",
+      "full_name": "Iamshankhadeep/ccseva",
       "description": "暂无描述",
-      "url": "https://github.com/fplotkq6102/agsb3",
-      "stars": 5,
-      "forks": 0,
-      "language": "Python",
-      "created_at": "2025-07-01T01:37:46Z",
-      "updated_at": "2025-07-01T01:39:14Z",
+      "url": "https://github.com/Iamshankhadeep/ccseva",
+      "stars": 426,
+      "forks": 20,
+      "language": "TypeScript",
+      "created_at": "2025-06-26T07:04:27Z",
+      "updated_at": "2025-07-01T08:45:05Z",
       "owner": {
-        "login": "fplotkq6102",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218697567?v=4"
+        "login": "Iamshankhadeep",
+        "avatar_url": "https://avatars.githubusercontent.com/u/24645773?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1010618519,
+      "name": "reviewit",
+      "full_name": "yoshiko-pg/reviewit",
+      "description": "A lightweight command-line tool that spins up a local web server to display Git commit diffs in a GitHub-like Files changed view",
+      "url": "https://github.com/yoshiko-pg/reviewit",
+      "stars": 405,
+      "forks": 11,
+      "language": "TypeScript",
+      "created_at": "2025-06-29T13:09:26Z",
+      "updated_at": "2025-07-01T08:48:52Z",
+      "owner": {
+        "login": "yoshiko-pg",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6822923?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1008849671,
+      "name": "zenta",
+      "full_name": "e6a5/zenta",
+      "description": "zenta - mindfulness for terminal users 🧘‍♂️",
+      "url": "https://github.com/e6a5/zenta",
+      "stars": 379,
+      "forks": 5,
+      "language": "Go",
+      "created_at": "2025-06-26T07:29:06Z",
+      "updated_at": "2025-07-01T03:52:44Z",
+      "owner": {
+        "login": "e6a5",
+        "avatar_url": "https://avatars.githubusercontent.com/u/21355258?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1010349721,
+      "name": "wayback",
+      "full_name": "kaniini/wayback",
+      "description": "experimental X11 compatibility layer",
+      "url": "https://github.com/kaniini/wayback",
+      "stars": 338,
+      "forks": 6,
+      "language": "C",
+      "created_at": "2025-06-28T22:05:34Z",
+      "updated_at": "2025-07-01T08:17:29Z",
+      "owner": {
+        "login": "kaniini",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1522444?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1008200939,
+      "name": "Keye",
+      "full_name": "Kwai-Keye/Keye",
+      "description": "暂无描述",
+      "url": "https://github.com/Kwai-Keye/Keye",
+      "stars": 337,
+      "forks": 1,
+      "language": "Python",
+      "created_at": "2025-06-25T07:22:00Z",
+      "updated_at": "2025-07-01T07:39:41Z",
+      "owner": {
+        "login": "Kwai-Keye",
+        "avatar_url": "https://avatars.githubusercontent.com/u/216671074?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1011050626,
+      "name": "r6-cheat",
+      "full_name": "r6-cheat/r6-cheat",
+      "description": "R6 Cheat is the ultimate undetected solution for Rainbow Six Siege, featuring a powerful R6S aimbot, detailed R6S ESP, and advanced R6S wallhack. With streamproof mode, no recoil, and HWID spoofer, our R6S cheats give you a safe, high-performance edge in every match customizable and easy to use.",
+      "url": "https://github.com/r6-cheat/r6-cheat",
+      "stars": 268,
+      "forks": 2,
+      "language": "C++",
+      "created_at": "2025-06-30T08:21:35Z",
+      "updated_at": "2025-07-01T06:26:01Z",
+      "owner": {
+        "login": "r6-cheat",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218372441?v=4"
+      },
+      "topics": []
+    },
+    {
+      "id": 1009304951,
+      "name": "xslt",
+      "full_name": "pacocoursey/xslt",
+      "description": "Native web build system (XML+XSLT)",
+      "url": "https://github.com/pacocoursey/xslt",
+      "stars": 263,
+      "forks": 4,
+      "language": "XSLT",
+      "created_at": "2025-06-26T23:14:09Z",
+      "updated_at": "2025-06-30T23:08:39Z",
+      "owner": {
+        "login": "pacocoursey",
+        "avatar_url": "https://avatars.githubusercontent.com/u/34928425?v=4"
       },
       "topics": []
     }
@@ -348,7 +348,7 @@
         "full_name": "GVCoder09/NoDPI4Android",
         "description": "NoDPI4Android is an Android app for bypassing the DPI (Deep Packet Inspection) ",
         "url": "https://github.com/GVCoder09/NoDPI4Android",
-        "stars": 44,
+        "stars": 47,
         "language": "Python",
         "topics": [
           "android",
@@ -483,208 +483,9 @@
         ]
       }
     ],
-    "react": [
-      {
-        "id": 1008105621,
-        "name": "soundz",
-        "full_name": "kazewaze/soundz",
-        "description": "Sound Effects Wrapper for Components",
-        "url": "https://github.com/kazewaze/soundz",
-        "stars": 17,
-        "language": "TypeScript",
-        "topics": [
-          "accessibility",
-          "batteries-included",
-          "component",
-          "component-library",
-          "components",
-          "customizable",
-          "javascript",
-          "js",
-          "jsx",
-          "next",
-          "nextjs",
-          "npm-package",
-          "react",
-          "reactjs",
-          "sound",
-          "sound-effects",
-          "sounds",
-          "ts",
-          "tsx",
-          "typescript"
-        ]
-      },
-      {
-        "id": 1008373485,
-        "name": "claudecodeui",
-        "full_name": "siteboon/claudecodeui",
-        "description": "Claude Code UI is a web and mobile friendly app UI for Claude Code CLI that allows you to view all Claude code sessions and projects and access them remotely",
-        "url": "https://github.com/siteboon/claudecodeui",
-        "stars": 15,
-        "language": "JavaScript",
-        "topics": [
-          "anthropic",
-          "anthropic-ai",
-          "anthropic-claude",
-          "claude",
-          "claude-api",
-          "claude-code",
-          "claude-code-sdk",
-          "gui",
-          "react",
-          "ui"
-        ]
-      },
-      {
-        "id": 1009747666,
-        "name": "locatr",
-        "full_name": "kadirmetin/locatr",
-        "description": "Real-time family location tracking app with privacy-first approach. Built with React Native, Next.js, and Node.js.",
-        "url": "https://github.com/kadirmetin/locatr",
-        "stars": 13,
-        "language": "TypeScript",
-        "topics": [
-          "expo",
-          "express",
-          "family-safety",
-          "location-tracker",
-          "mapbox",
-          "mobile-app",
-          "mongodb",
-          "monorepo",
-          "nextjs",
-          "privacy-focused",
-          "react",
-          "react-native",
-          "real-time-tracking",
-          "socket-io",
-          "typescript",
-          "web-app"
-        ]
-      }
-    ],
-    "vue": [
-      {
-        "id": 1008658385,
-        "name": "vue-smart-importer",
-        "full_name": "MenasriaMohamed/vue-smart-importer",
-        "description": "VS Code extension that simplifies Vue.js development by providing right-click import functionality for components, composables, and utilities with smart path resolution.",
-        "url": "https://github.com/MenasriaMohamed/vue-smart-importer",
-        "stars": 2,
-        "language": "TypeScript",
-        "topics": [
-          "developer-tools",
-          "import",
-          "javascript",
-          "path-helper",
-          "productivity",
-          "typescript",
-          "vscode-extension",
-          "vue",
-          "vuejs"
-        ]
-      },
-      {
-        "id": 1008687643,
-        "name": "vite-plugin-vue-template-selector",
-        "full_name": "tomheaton/vite-plugin-vue-template-selector",
-        "description": "A Vite plugin for Vue.js that allows dynamic template selection at build time.",
-        "url": "https://github.com/tomheaton/vite-plugin-vue-template-selector",
-        "stars": 2,
-        "language": "TypeScript",
-        "topics": [
-          "plugin",
-          "template-selector",
-          "templates",
-          "typescript",
-          "vite",
-          "vue",
-          "vuejs"
-        ]
-      },
-      {
-        "id": 1010464297,
-        "name": "zap_dashboard",
-        "full_name": "pratik227/zap_dashboard",
-        "description": "A modern, real-time dashboard for managing and analyzing Lightning Network zaps (tips) with Nostr Wallet Connect integration.",
-        "url": "https://github.com/pratik227/zap_dashboard",
-        "stars": 1,
-        "language": "Vue",
-        "topics": [
-          "alby",
-          "analysis",
-          "sats",
-          "vue",
-          "wallet",
-          "zap"
-        ]
-      }
-    ],
-    "nodejs": [
-      {
-        "id": 1009229429,
-        "name": "SmartAI-Trading-Bot",
-        "full_name": "DjorvithrjwNP/SmartAI-Trading-Bot",
-        "description": "Trading Smart AI Bot for Ethereum blockchain",
-        "url": "https://github.com/DjorvithrjwNP/SmartAI-Trading-Bot",
-        "stars": 51,
-        "language": "Unknown",
-        "topics": [
-          "ai",
-          "blockchain",
-          "bot",
-          "btc",
-          "crypto-bot",
-          "decentralized-exchanges",
-          "dex",
-          "eth",
-          "ethereum",
-          "javascript",
-          "mempool",
-          "mev",
-          "nodejs",
-          "smart",
-          "smart-contracts",
-          "solana",
-          "solidity"
-        ]
-      },
-      {
-        "id": 1010539804,
-        "name": "Oroswap-Auto-Bot",
-        "full_name": "vikitoshi/Oroswap-Auto-Bot",
-        "description": "Automated trading bot for OroSwap DEX on Zig Network. This bot performs automated swaps and liquidity operations to earn points and potential airdrops",
-        "url": "https://github.com/vikitoshi/Oroswap-Auto-Bot",
-        "stars": 20,
-        "language": "JavaScript",
-        "topics": [
-          "airdrop",
-          "bot",
-          "nodejs",
-          "oroswap",
-          "oroswap-bot",
-          "testnet"
-        ]
-      },
-      {
-        "id": 1008912915,
-        "name": "BeatDock",
-        "full_name": "lazaroagomez/BeatDock",
-        "description": "🎵 Free, open-source, self-hosted Discord music bot with slash commands and Docker deployment. Features YouTube playback, queue management, and multilingual support.",
-        "url": "https://github.com/lazaroagomez/BeatDock",
-        "stars": 17,
-        "language": "JavaScript",
-        "topics": [
-          "discord",
-          "discord-bot",
-          "discord-js",
-          "lavalink",
-          "music-bot",
-          "nodejs"
-        ]
-      }
-    ]
+    "react": [],
+    "vue": [],
+    "nodejs": []
   },
-  "last_updated": "2025-07-01T08:31:57.760677"
+  "last_updated": "2025-07-01T16:56:57.684871"
 }

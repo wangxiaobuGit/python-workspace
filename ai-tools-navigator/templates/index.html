@@ -4,14 +4,14 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="hero-section bg-gradient text-white py-5">
+<!--<section class="hero-section bg-gradient text-white py-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">发现最优秀的 AI 工具</h1>
                 <p class="lead mb-4">精选全球最前沿的人工智能工具，助力您的工作和创作</p>
                 
-                <!-- 统计信息 -->
+                &lt;!&ndash; 统计信息 &ndash;&gt;
                 {% if stats %}
                 <div class="row mb-4 text-center">
                     <div class="col-3">
@@ -57,7 +57,8 @@
             </div>
         </div>
     </div>
-</section>
+</section>-->
+
 
 <!-- 统计数据 -->
 <section class="stats-section py-4 bg-light">
@@ -82,6 +83,58 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- GitHub 今日热榜 -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="bi bi-github text-dark me-2"></i>GitHub 今日热榜
+                </h2>
+                <p class="text-center text-muted">发现最热门的开源项目</p>
+            </div>
+        </div>
+
+        {% if github_trending and github_trending.daily %}
+        <div class="row g-4">
+            {% for repo in github_trending.daily[:6] %}
+            <div class="col-lg-6">
+                <div class="card github-card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start mb-3">
+                            <img src="{{ repo.owner.avatar_url }}" alt="{{ repo.owner.login }}"
+                                 class="rounded-circle me-3" width="40" height="40">
+                            <div class="flex-grow-1">
+                                <h6 class="card-title mb-1">
+                                    <a href="{{ repo.url }}" target="_blank" class="text-decoration-none">
+                                        {{ repo.full_name }}
+                                    </a>
+                                </h6>
+                                <p class="card-text text-muted small mb-2">{{ repo.description[:80] }}{% if repo.description|length > 80 %}...{% endif %}</p>
+                                <div class="d-flex align-items-center gap-3 small text-muted">
+                                    <span><i class="bi bi-star-fill text-warning me-1"></i>{{ repo.stars }}</span>
+                                    <span><i class="bi bi-diagram-3 me-1"></i>{{ repo.forks }}</span>
+                                    {% if repo.language %}
+                                    <span class="badge bg-secondary">{{ repo.language }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-center py-5">
+            <i class="bi bi-github display-1 text-muted"></i>
+            <p class="text-muted mt-3">GitHub热榜数据加载中...</p>
+            <button class="btn btn-primary" onclick="location.reload()">刷新页面</button>
+        </div>
+        {% endif %}
     </div>
 </section>
 
@@ -197,58 +250,6 @@
         <div class="text-center py-5">
             <i class="bi bi-folder2-open display-1 text-muted"></i>
             <p class="text-muted mt-3">暂无分类</p>
-        </div>
-        {% endif %}
-    </div>
-</section>
-
-<!-- GitHub 今日热榜 -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <div class="row mb-4">
-            <div class="col-12">
-                <h2 class="text-center mb-4">
-                    <i class="bi bi-github text-dark me-2"></i>GitHub 今日热榜
-                </h2>
-                <p class="text-center text-muted">发现最热门的开源项目</p>
-            </div>
-        </div>
-        
-        {% if github_trending and github_trending.daily %}
-        <div class="row g-4">
-            {% for repo in github_trending.daily[:6] %}
-            <div class="col-lg-6">
-                <div class="card github-card h-100 shadow-sm">
-                    <div class="card-body">
-                        <div class="d-flex align-items-start mb-3">
-                            <img src="{{ repo.owner.avatar_url }}" alt="{{ repo.owner.login }}" 
-                                 class="rounded-circle me-3" width="40" height="40">
-                            <div class="flex-grow-1">
-                                <h6 class="card-title mb-1">
-                                    <a href="{{ repo.url }}" target="_blank" class="text-decoration-none">
-                                        {{ repo.full_name }}
-                                    </a>
-                                </h6>
-                                <p class="card-text text-muted small mb-2">{{ repo.description[:80] }}{% if repo.description|length > 80 %}...{% endif %}</p>
-                                <div class="d-flex align-items-center gap-3 small text-muted">
-                                    <span><i class="bi bi-star-fill text-warning me-1"></i>{{ repo.stars }}</span>
-                                    <span><i class="bi bi-diagram-3 me-1"></i>{{ repo.forks }}</span>
-                                    {% if repo.language %}
-                                    <span class="badge bg-secondary">{{ repo.language }}</span>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        {% else %}
-        <div class="text-center py-5">
-            <i class="bi bi-github display-1 text-muted"></i>
-            <p class="text-muted mt-3">GitHub热榜数据加载中...</p>
-            <button class="btn btn-primary" onclick="location.reload()">刷新页面</button>
         </div>
         {% endif %}
     </div>

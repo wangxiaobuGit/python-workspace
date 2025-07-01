@@ -368,6 +368,31 @@ body {
     background: #a8a8a8;
 }
 
+/* 统计信息样式 */
+.stat-item {
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item small {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
 /* 打印样式 */
 @media print {
     .navbar, .footer, .btn, .modal {

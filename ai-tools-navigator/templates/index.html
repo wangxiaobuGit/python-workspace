@@ -10,6 +10,37 @@
             <div class="col-lg-6">
                 <h1 class="display-4 fw-bold mb-4">发现最优秀的 AI 工具</h1>
                 <p class="lead mb-4">精选全球最前沿的人工智能工具，助力您的工作和创作</p>
+                
+                <!-- 统计信息 -->
+                {% if stats %}
+                <div class="row mb-4 text-center">
+                    <div class="col-3">
+                        <div class="stat-item">
+                            <h3 class="text-warning">{{ stats.total_tools }}</h3>
+                            <small>AI 工具</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="stat-item">
+                            <h3 class="text-info">{{ stats.total_categories }}</h3>
+                            <small>分类</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="stat-item">
+                            <h3 class="text-success">{{ stats.featured_tools }}</h3>
+                            <small>精选</small>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="stat-item">
+                            <h3 class="text-light">{{ stats.avg_rating }}</h3>
+                            <small>平均评分</small>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                
                 <div class="d-flex gap-3">
                     <a href="#featured-tools" class="btn btn-light btn-lg">
                         <i class="bi bi-star-fill me-2"></i>热门推荐

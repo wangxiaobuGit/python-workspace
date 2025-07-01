@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, flash
 import json
 import os
 from datetime import datetime
+import uuid
 
 app = Flask(__name__)
-app.secret_key = 'ai-tools-navigator-secret-key'
+app.secret_key = 'ai-tools-navigator-secret-key-v1-enhanced'
 
 # 数据文件路径
 DATA_FILE = os.path.join(os.path.dirname(__file__), 'data', 'ai_tools.json')
@@ -30,6 +31,17 @@ def get_tool_by_id(tool_id):
             return tool
     return None
 
+def get_statistics():
+    """获取网站统计信息"""
+    data = load_data()
+    stats = {
+        'total_tools': len(data['tools']),
+        'total_categories': len(data['categories']),
+        'featured_tools': len([t for t in data['tools'] if t.get('is_featured', False)]),
+        'avg_rating': round(sum(t.get('rating', 0) for t in data['tools']) / len(data['tools']) if data['tools'] else 0, 1)
+    }
+    return stats
+
 @app.route('/')
 def index():
     """首页 - 展示热门 AI 工具"""
@@ -37,11 +49,13 @@ def index():
     featured_tools = [tool for tool in data['tools'] if tool.get('is_featured', False)]
     recent_tools = sorted(data['tools'], key=lambda x: x.get('rating', 0), reverse=True)[:6]
     categories = data['categories']
+    stats = get_statistics()
     
     return render_template('index.html', 
                          featured_tools=featured_tools,
                          recent_tools=recent_tools,
-                         categories=categories)
+                         categories=categories,
+                         stats=stats)
 
 @app.route('/category/<category_name>')
 def category(category_name):
@@ -196,6 +210,20 @@ def api_search():
         results = data['tools']
     
     return jsonify(results)
+
+@app.route('/api/stats')
+def api_stats():
+    """API: 获取网站统计信息"""
+    stats = get_statistics()
+    return jsonify(stats)
+
+@app.route('/api/tools/random')
+def api_random_tools():
+    """API: 获取随机推荐工具"""
+    data = load_data()
+    import random
+    random_tools = random.sample(data['tools'], min(3, len(data['tools'])))
+    return jsonify(random_tools)
 
 if __name__ == '__main__':
     # 确保数据目录存在

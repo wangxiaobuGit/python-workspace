@@ -429,6 +429,42 @@ document.addEventListener('DOMContentLoaded', function() {
     initPerformanceMonitoring();
 });
 
+// 动态加载统计信息
+function loadStats() {
+    fetch('/api/stats')
+        .then(response => response.json())
+        .then(data => {
+            // 更新统计数字（如果页面有统计元素）
+            const statElements = document.querySelectorAll('.stat-item h3');
+            if (statElements.length >= 4) {
+                statElements[0].textContent = data.total_tools;
+                statElements[1].textContent = data.total_categories;
+                statElements[2].textContent = data.featured_tools;
+                statElements[3].textContent = data.avg_rating;
+            }
+        })
+        .catch(error => console.log('统计信息加载失败:', error));
+}
+
+// 加载随机推荐工具
+function loadRandomTools() {
+    fetch('/api/tools/random')
+        .then(response => response.json())
+        .then(tools => {
+            console.log('随机推荐工具:', tools);
+            // 这里可以添加显示随机工具的逻辑
+        })
+        .catch(error => console.log('随机工具加载失败:', error));
+}
+
+// 页面加载完成后加载统计信息
+document.addEventListener('DOMContentLoaded', function() {
+    // 如果是首页，加载统计信息
+    if (document.querySelector('.stat-item')) {
+        loadStats();
+    }
+});
+
 // 导出全局函数
 window.showToast = showToast;
 window.copyToClipboard = copyToClipboard;
@@ -436,3 +472,5 @@ window.shareUrl = shareUrl;
 window.toggleFavorite = toggleFavorite;
 window.handleImageError = handleImageError;
 window.smoothScrollTo = smoothScrollTo;
+window.loadStats = loadStats;
+window.loadRandomTools = loadRandomTools;

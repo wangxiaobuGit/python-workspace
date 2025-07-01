@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+
+{% block title %}编辑工具 - {{ tool.name }}{% endblock %}
+
+{% block content %}
+<!-- 页面头部 -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ url_for('index') }}">首页</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{{ url_for('admin') }}">管理后台</a>
+                </li>
+                <li class="breadcrumb-item active">编辑工具</li>
+            </ol>
+        </nav>
+        
+        <h1 class="mb-0">
+            <i class="bi bi-pencil me-2"></i>编辑工具 - {{ tool.name }}
+        </h1>
+    </div>
+</section>
+
+<!-- 编辑表单 -->
+<section class="py-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h4 class="mb-0">工具信息</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" id="editToolForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">工具名称 *</label>
+                                        <input type="text" class="form-control" id="name" name="name" 
+                                               value="{{ tool.name }}" required>
+                                        <div class="form-text">输入 AI 工具的名称</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="category" class="form-label">分类 *</label>
+                                        <select class="form-select" id="category" name="category" required>
+                                            <option value="">选择分类</option>
+                                            {% for category in categories %}
+                                            <option value="{{ category.name }}" 
+                                                    {% if category.name == tool.category %}selected{% endif %}>
+                                                {{ category.name }}
+                                            </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="description" class="form-label">工具描述 *</label>
+                                <textarea class="form-control" id="description" name="description" 
+                                          rows="3" required>{{ tool.description }}</textarea>
+                                <div class="form-text">详细描述工具的功能和特点</div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="mb-3">
+                                        <label for="url" class="form-label">官方网址 *</label>
+                                        <input type="url" class="form-control" id="url" name="url" 
+                                               value="{{ tool.url }}" required>
+                                        <div class="form-text">工具的官方网站地址</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label for="rating" class="form-label">评分 *</label>
+                                        <input type="number" class="form-control" id="rating" name="rating" 
+                                               min="0" max="5" step="0.1" value="{{ tool.rating }}" required>
+                                        <div class="form-text">0-5 分</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="logo" class="form-label">Logo 地址</label>
+                                <input type="url" class="form-control" id="logo" name="logo" 
+                                       value="{{ tool.logo }}">
+                                <div class="form-text">工具的 Logo 图片地址（可选）</div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="tags" class="form-label">标签 *</label>
+                                <input type="text" class="form-control" id="tags" name="tags" 
+                                       value="{{ tool.tags|join(', ') }}" required>
+                                <div class="form-text">用逗号分隔多个标签，如：对话,文本生成,编程</div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="is_featured" 
+                                           name="is_featured" {% if tool.is_featured %}checked{% endif %}>
+                                    <label class="form-check-label" for="is_featured">
+                                        <i class="bi bi-star-fill text-warning me-1"></i>设为推荐工具
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex gap-2">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="bi bi-check-circle me-1"></i>保存修改
+                                </button>
+                                <a href="{{ url_for('admin') }}" class="btn btn-secondary">
+                                    <i class="bi bi-arrow-left me-1"></i>返回
+                                </a>
+                                <button type="button" class="btn btn-outline-secondary" onclick="previewTool()">
+                                    <i class="bi bi-eye me-1"></i>预览
+                                </button>
+                                <a href="{{ url_for('tool_detail', tool_id=tool.id) }}" 
+                                   class="btn btn-outline-info" target="_blank">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i>查看详情
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 预览卡片 -->
+            <div class="col-lg-4">
+                <div class="card" id="previewCard" style="display: none;">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-eye me-2"></i>预览
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img id="previewLogo" src="{{ tool.logo }}" 
+                                 alt="Logo" class="tool-logo me-3"
+                                 onerror="this.src='https://via.placeholder.com/48'">
+                            <div>
+                                <h6 class="mb-1" id="previewName">{{ tool.name }}</h6>
+                                <span class="badge bg-primary" id="previewCategory">{{ tool.category }}</span>
+                            </div>
+                        </div>
+                        
+                        <p class="text-muted" id="previewDescription">{{ tool.description }}</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="rating" id="previewRating">
+                                {% for i in range(5) %}
+                                    {% if i < tool.rating %}
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    {% else %}
+                                        <i class="bi bi-star text-muted"></i>
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="ms-1 text-muted">{{ tool.rating }}</span>
+                            </div>
+                            <span class="badge bg-success" id="previewFeatured" 
+                                  {% if not tool.is_featured %}style="display: none;"{% endif %}>
+                                <i class="bi bi-star-fill me-1"></i>推荐
+                            </span>
+                        </div>
+                        
+                        <div class="mb-3" id="previewTags">
+                            {% for tag in tool.tags[:3] %}
+                            <span class="badge bg-light text-dark me-1"># {{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary flex-fill" disabled>
+                                <i class="bi bi-info-circle me-1"></i>详情
+                            </button>
+                            <button class="btn btn-primary flex-fill" disabled>
+                                <i class="bi bi-box-arrow-up-right me-1"></i>访问
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 操作历史 -->
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <h6 class="mb-0">
+                            <i class="bi bi-clock-history me-2"></i>工具信息
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2">
+                            <strong>工具 ID：</strong>{{ tool.id }}
+                        </div>
+                        <div class="mb-2">
+                            <strong>当前评分：</strong>{{ tool.rating }} / 5.0
+                        </div>
+                        <div class="mb-2">
+                            <strong>标签数量：</strong>{{ tool.tags|length }}
+                        </div>
+                        <div class="mb-0">
+                            <strong>推荐状态：</strong>
+                            {% if tool.is_featured %}
+                            <span class="text-success">已推荐</span>
+                            {% else %}
+                            <span class="text-muted">未推荐</span>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 危险操作 -->
+                <div class="card mt-4 border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <h6 class="mb-0">
+                            <i class="bi bi-exclamation-triangle me-2"></i>危险操作
+                        </h6>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-3">删除工具将无法恢复</p>
+                        <button class="btn btn-outline-danger btn-sm" 
+                                onclick="deleteTool({{ tool.id }}, '{{ tool.name }}')">
+                            <i class="bi bi-trash me-1"></i>删除工具
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 删除确认模态框 -->
+<div class="modal fade" id="deleteModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">确认删除</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除工具 "<span id="deleteToolName"></span>" 吗？</p>
+                <p class="text-muted">此操作不可撤销。</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                <form id="deleteForm" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-danger">确认删除</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+// 实时预览功能
+function updatePreview() {
+    const name = document.getElementById('name').value || '工具名称';
+    const category = document.getElementById('category').value || '分类';
+    const description = document.getElementById('description').value || '工具描述...';
+    const rating = parseFloat(document.getElementById('rating').value) || 0;
+    const logo = document.getElementById('logo').value || 'https://via.placeholder.com/48';
+    const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim()).filter(tag => tag);
+    const isFeatured = document.getElementById('is_featured').checked;
+    
+    // 更新预览内容
+    document.getElementById('previewName').textContent = name;
+    document.getElementById('previewCategory').textContent = category;
+    document.getElementById('previewDescription').textContent = description;
+    document.getElementById('previewLogo').src = logo;
+    
+    // 更新评分
+    const ratingContainer = document.getElementById('previewRating');
+    let ratingHtml = '';
+    for (let i = 1; i <= 5; i++) {
+        if (i <= rating) {
+            ratingHtml += '<i class="bi bi-star-fill text-warning"></i>';
+        } else {
+            ratingHtml += '<i class="bi bi-star text-muted"></i>';
+        }
+    }
+    ratingHtml += `<span class="ms-1 text-muted">${rating.toFixed(1)}</span>`;
+    ratingContainer.innerHTML = ratingHtml;
+    
+    // 更新推荐标签
+    const featuredBadge = document.getElementById('previewFeatured');
+    if (isFeatured) {
+        featuredBadge.style.display = 'inline-block';
+    } else {
+        featuredBadge.style.display = 'none';
+    }
+    
+    // 更新标签
+    const tagsContainer = document.getElementById('previewTags');
+    let tagsHtml = '';
+    tags.slice(0, 3).forEach(tag => {
+        tagsHtml += `<span class="badge bg-light text-dark me-1"># ${tag}</span>`;
+    });
+    tagsContainer.innerHTML = tagsHtml;
+}
+
+// 显示预览
+function previewTool() {
+    updatePreview();
+    document.getElementById('previewCard').style.display = 'block';
+}
+
+// 删除工具
+function deleteTool(toolId, toolName) {
+    document.getElementById('deleteToolName').textContent = toolName;
+    document.getElementById('deleteForm').action = `/admin/tool/${toolId}/delete`;
+    
+    const modal = new bootstrap.Modal(document.getElementById('deleteModal'));
+    modal.show();
+}
+
+// 绑定输入事件
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = ['name', 'category', 'description', 'rating', 'logo', 'tags', 'is_featured'];
+    inputs.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            element.addEventListener('input', updatePreview);
+            element.addEventListener('change', updatePreview);
+        }
+    });
+    
+    // 表单验证
+    document.getElementById('editToolForm').addEventListener('submit', function(e) {
+        const name = document.getElementById('name').value.trim();
+        const url = document.getElementById('url').value.trim();
+        const description = document.getElementById('description').value.trim();
+        const category = document.getElementById('category').value;
+        const tags = document.getElementById('tags').value.trim();
+        
+        if (!name || !url || !description || !category || !tags) {
+            e.preventDefault();
+            alert('请填写所有必填字段');
+            return false;
+        }
+        
+        // 验证 URL 格式
+        try {
+            new URL(url);
+        } catch {
+            e.preventDefault();
+            alert('请输入有效的网址');
+            return false;
+        }
+        
+        return true;
+    });
+    
+    // 初始化预览
+    updatePreview();
+});
+
+// Logo 加载错误处理
+document.getElementById('logo').addEventListener('input', function() {
+    const logo = document.getElementById('previewLogo');
+    logo.onerror = function() {
+        this.src = 'https://via.placeholder.com/48?text=Logo';
+    };
+});
+</script>
+{% endblock %}

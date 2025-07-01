@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+{% block title %}{{ category_name }} - AI 工具导航{% endblock %}
+
+{% block content %}
+<!-- 分类头部 -->
+<section class="category-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb text-white-50">
+                        <li class="breadcrumb-item">
+                            <a href="{{ url_for('index') }}" class="text-white-50">首页</a>
+                        </li>
+                        <li class="breadcrumb-item active text-white">{{ category_name }}</li>
+                    </ol>
+                </nav>
+                
+                <div class="d-flex align-items-center">
+                    {% if current_category %}
+                    <span class="display-4 me-3">{{ current_category.icon }}</span>
+                    {% endif %}
+                    <div>
+                        <h1 class="mb-2">{{ category_name }}</h1>
+                        {% if current_category %}
+                        <p class="lead mb-0">{{ current_category.description }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="mt-3">
+                    <span class="badge bg-light text-dark fs-6">
+                        <i class="bi bi-collection me-1"></i>{{ tools|length }} 个工具
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 工具列表 -->
+<section class="py-5">
+    <div class="container">
+        {% if tools %}
+        <!-- 排序和筛选 -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center">
+                    <label for="sortSelect" class="form-label me-2 mb-0">排序：</label>
+                    <select class="form-select form-select-sm" id="sortSelect" style="width: auto;">
+                        <option value="rating">按评分</option>
+                        <option value="name">按名称</option>
+                        <option value="featured">推荐优先</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-outline-secondary active" id="gridView">
+                        <i class="bi bi-grid-3x3-gap"></i>
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" id="listView">
+                        <i class="bi bi-list"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 工具网格 -->
+        <div class="row g-4" id="toolsGrid">
+            {% for tool in tools %}
+            <div class="col-lg-4 col-md-6 tool-item" 
+                 data-rating="{{ tool.rating }}" 
+                 data-name="{{ tool.name }}" 
+                 data-featured="{{ tool.is_featured|lower }}">
+                <div class="card tool-card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="tool-logo me-3"
+                                 onerror="this.src='https://via.placeholder.com/48'">
+                            <div class="flex-grow-1">
+                                <h5 class="card-title mb-1">{{ tool.name }}</h5>
+                                {% if tool.is_featured %}
+                                <span class="badge bg-warning text-dark">
+                                    <i class="bi bi-star-fill me-1"></i>推荐
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <p class="card-text text-muted">{{ tool.description[:120] }}{% if tool.description|length > 120 %}...{% endif %}</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="rating">
+                                {% for i in range(5) %}
+                                    {% if i < tool.rating %}
+                                        <i class="bi bi-star-fill text-warning"></i>
+                                    {% else %}
+                                        <i class="bi bi-star text-muted"></i>
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="ms-1 text-muted">{{ tool.rating }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            {% for tag in tool.tags[:4] %}
+                            <span class="badge bg-light text-dark me-1"># {{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        
+                        <div class="d-flex gap-2">
+                            <a href="{{ url_for('tool_detail', tool_id=tool.id) }}" class="btn btn-outline-primary flex-fill">
+                                <i class="bi bi-info-circle me-1"></i>详情
+                            </a>
+                            <a href="{{ tool.url }}" target="_blank" class="btn btn-primary flex-fill">
+                                <i class="bi bi-box-arrow-up-right me-1"></i>访问
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        <!-- 工具列表视图 -->
+        <div class="d-none" id="toolsList">
+            {% for tool in tools %}
+            <div class="card mb-3 tool-item" 
+                 data-rating="{{ tool.rating }}" 
+                 data-name="{{ tool.name }}" 
+                 data-featured="{{ tool.is_featured|lower }}">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="tool-logo me-3"
+                                     onerror="this.src='https://via.placeholder.com/48'">
+                                <div>
+                                    <h5 class="mb-1">{{ tool.name }}</h5>
+                                    <div class="d-flex align-items-center">
+                                        <div class="rating me-3">
+                                            {% for i in range(5) %}
+                                                {% if i < tool.rating %}
+                                                    <i class="bi bi-star-fill text-warning"></i>
+                                                {% else %}
+                                                    <i class="bi bi-star text-muted"></i>
+                                                {% endif %}
+                                            {% endfor %}
+                                            <span class="ms-1 text-muted">{{ tool.rating }}</span>
+                                        </div>
+                                        {% if tool.is_featured %}
+                                        <span class="badge bg-warning text-dark">
+                                            <i class="bi bi-star-fill me-1"></i>推荐
+                                        </span>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-muted mb-2">{{ tool.description[:150] }}{% if tool.description|length > 150 %}...{% endif %}</p>
+                            <div>
+                                {% for tag in tool.tags[:5] %}
+                                <span class="badge bg-light text-dark me-1"># {{ tag }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-md-end">
+                            <div class="d-flex flex-column gap-2">
+                                <a href="{{ url_for('tool_detail', tool_id=tool.id) }}" class="btn btn-outline-primary">
+                                    <i class="bi bi-info-circle me-1"></i>查看详情
+                                </a>
+                                <a href="{{ tool.url }}" target="_blank" class="btn btn-primary">
+                                    <i class="bi bi-box-arrow-up-right me-1"></i>访问工具
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        {% else %}
+        <!-- 空状态 -->
+        <div class="text-center py-5">
+            <i class="bi bi-inbox display-1 text-muted"></i>
+            <h3 class="mt-3 text-muted">暂无工具</h3>
+            <p class="text-muted">该分类下还没有添加任何工具</p>
+            <a href="{{ url_for('index') }}" class="btn btn-primary">
+                <i class="bi bi-house me-1"></i>返回首页
+            </a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- 其他分类推荐 -->
+{% if categories %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <h3 class="text-center mb-4">探索其他分类</h3>
+        <div class="row g-3">
+            {% for category in categories %}
+            {% if category.name != category_name %}
+            <div class="col-lg-2 col-md-4 col-6">
+                <a href="{{ url_for('category', category_name=category.name) }}" class="text-decoration-none">
+                    <div class="card text-center h-100 category-card-small">
+                        <div class="card-body py-3">
+                            <div class="mb-2">{{ category.icon }}</div>
+                            <small class="text-muted">{{ category.name }}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sortSelect = document.getElementById('sortSelect');
+    const gridView = document.getElementById('gridView');
+    const listView = document.getElementById('listView');
+    const toolsGrid = document.getElementById('toolsGrid');
+    const toolsList = document.getElementById('toolsList');
+    
+    // 排序功能
+    sortSelect.addEventListener('change', function() {
+        const sortBy = this.value;
+        const items = Array.from(document.querySelectorAll('.tool-item'));
+        
+        items.sort((a, b) => {
+            switch(sortBy) {
+                case 'rating':
+                    return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                case 'name':
+                    return a.dataset.name.localeCompare(b.dataset.name);
+                case 'featured':
+                    const aFeatured = a.dataset.featured === 'true';
+                    const bFeatured = b.dataset.featured === 'true';
+                    if (aFeatured && !bFeatured) return -1;
+                    if (!aFeatured && bFeatured) return 1;
+                    return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+                default:
+                    return 0;
+            }
+        });
+        
+        // 重新排列元素
+        const container = toolsGrid.style.display !== 'none' ? toolsGrid : toolsList;
+        items.forEach(item => container.appendChild(item));
+    });
+    
+    // 视图切换
+    gridView.addEventListener('click', function() {
+        toolsGrid.classList.remove('d-none');
+        toolsList.classList.add('d-none');
+        gridView.classList.add('active');
+        listView.classList.remove('active');
+    });
+    
+    listView.addEventListener('click', function() {
+        toolsGrid.classList.add('d-none');
+        toolsList.classList.remove('d-none');
+        listView.classList.add('active');
+        gridView.classList.remove('active');
+    });
+});
+</script>
+{% endblock %}

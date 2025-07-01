@@ -1,0 +1,168 @@
+{
+  "tools": [
+    {
+      "id": 1,
+      "name": "ChatGPT",
+      "description": "OpenAI 开发的强大对话式 AI 助手，支持文本生成、问答、编程等多种任务",
+      "url": "https://chat.openai.com",
+      "category": "写作助手",
+      "tags": ["对话", "文本生成", "编程", "问答"],
+      "rating": 4.8,
+      "is_featured": true,
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+    },
+    {
+      "id": 2,
+      "name": "Midjourney",
+      "description": "基于 Discord 的 AI 图像生成工具，能够创造出令人惊艳的艺术作品",
+      "url": "https://www.midjourney.com",
+      "category": "图像生成",
+      "tags": ["图像生成", "艺术", "创意"],
+      "rating": 4.7,
+      "is_featured": true,
+      "logo": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/midjourney.png"
+    },
+    {
+      "id": 3,
+      "name": "GitHub Copilot",
+      "description": "GitHub 和 OpenAI 合作开发的 AI 编程助手，提供智能代码补全和建议",
+      "url": "https://github.com/features/copilot",
+      "category": "编程辅助",
+      "tags": ["编程", "代码补全", "开发工具"],
+      "rating": 4.6,
+      "is_featured": true,
+      "logo": "https://github.githubassets.com/images/modules/site/copilot/copilot.png"
+    },
+    {
+      "id": 4,
+      "name": "Stable Diffusion",
+      "description": "开源的文本到图像生成模型，支持本地部署和自定义训练",
+      "url": "https://stability.ai/stable-diffusion",
+      "category": "图像生成",
+      "tags": ["开源", "图像生成", "本地部署"],
+      "rating": 4.5,
+      "is_featured": false,
+      "logo": "https://stability.ai/favicon.ico"
+    },
+    {
+      "id": 5,
+      "name": "Notion AI",
+      "description": "集成在 Notion 中的 AI 写作助手，帮助用户提高写作效率",
+      "url": "https://www.notion.so/product/ai",
+      "category": "写作助手",
+      "tags": ["写作", "笔记", "生产力"],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://www.notion.so/images/favicon.ico"
+    },
+    {
+      "id": 6,
+      "name": "Whisper",
+      "description": "OpenAI 开发的自动语音识别系统，支持多语言转录",
+      "url": "https://openai.com/research/whisper",
+      "category": "音频处理",
+      "tags": ["语音识别", "转录", "多语言"],
+      "rating": 4.6,
+      "is_featured": false,
+      "logo": "https://openai.com/favicon.ico"
+    },
+    {
+      "id": 7,
+      "name": "Claude",
+      "description": "Anthropic 开发的 AI 助手，擅长长文本处理和复杂推理",
+      "url": "https://claude.ai",
+      "category": "写作助手",
+      "tags": ["对话", "长文本", "推理"],
+      "rating": 4.5,
+      "is_featured": true,
+      "logo": "https://claude.ai/favicon.ico"
+    },
+    {
+      "id": 8,
+      "name": "DALL-E 3",
+      "description": "OpenAI 最新的图像生成模型，能够理解复杂的文本描述",
+      "url": "https://openai.com/dall-e-3",
+      "category": "图像生成",
+      "tags": ["图像生成", "文本理解", "创意"],
+      "rating": 4.7,
+      "is_featured": true,
+      "logo": "https://openai.com/favicon.ico"
+    },
+    {
+      "id": 9,
+      "name": "Cursor",
+      "description": "AI 驱动的代码编辑器，提供智能代码生成和重构功能",
+      "url": "https://cursor.sh",
+      "category": "编程辅助",
+      "tags": ["代码编辑器", "AI编程", "重构"],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://cursor.sh/favicon.ico"
+    },
+    {
+      "id": 10,
+      "name": "ElevenLabs",
+      "description": "先进的 AI 语音合成平台，能够生成逼真的人声",
+      "url": "https://elevenlabs.io",
+      "category": "音频处理",
+      "tags": ["语音合成", "配音", "多语言"],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://elevenlabs.io/favicon.ico"
+    },
+    {
+      "id": 11,
+      "name": "Perplexity AI",
+      "description": "AI 搜索引擎，提供准确的答案和引用来源",
+      "url": "https://www.perplexity.ai",
+      "category": "搜索引擎",
+      "tags": ["搜索", "问答", "引用"],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://www.perplexity.ai/favicon.ico"
+    },
+    {
+      "id": 12,
+      "name": "Runway ML",
+      "description": "创意 AI 平台，提供视频编辑、图像生成等多种 AI 工具",
+      "url": "https://runwayml.com",
+      "category": "视频处理",
+      "tags": ["视频编辑", "创意", "多媒体"],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://runwayml.com/favicon.ico"
+    }
+  ],
+  "categories": [
+    {
+      "name": "写作助手",
+      "description": "帮助用户提高写作效率和质量的 AI 工具",
+      "icon": "✍️"
+    },
+    {
+      "name": "图像生成",
+      "description": "基于文本描述生成图像的 AI 工具",
+      "icon": "🎨"
+    },
+    {
+      "name": "编程辅助",
+      "description": "协助开发者编写和优化代码的 AI 工具",
+      "icon": "💻"
+    },
+    {
+      "name": "音频处理",
+      "description": "处理语音、音乐等音频内容的 AI 工具",
+      "icon": "🎵"
+    },
+    {
+      "name": "搜索引擎",
+      "description": "基于 AI 的智能搜索和问答工具",
+      "icon": "🔍"
+    },
+    {
+      "name": "视频处理",
+      "description": "视频编辑、生成和处理的 AI 工具",
+      "icon": "🎬"
+    }
+  ]
+}

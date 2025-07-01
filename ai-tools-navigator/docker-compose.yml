@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  ai-tools-navigator:
+    build: .
+    container_name: ai-tools-navigator
+    ports:
+      - "12000:12000"
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:12000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # 可选：添加 Nginx 反向代理
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: ai-tools-nginx
+  #   ports:
+  #     - "80:80"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf
+  #   depends_on:
+  #     - ai-tools-navigator
+  #   restart: unless-stopped
+
+networks:
+  default:
+    name: ai-tools-network

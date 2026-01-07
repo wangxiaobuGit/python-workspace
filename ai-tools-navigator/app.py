@@ -144,19 +144,60 @@ def index():
 
 @app.route('/category/<category_name>')
 def category(category_name):
-    """分类页面"""
+    """分类页面 - 支持排序和分页"""
     data = load_data()
+    price_type = request.args.get('price_type', '')
+    min_rating = request.args.get('min_rating', type=float)
+    sort_by = request.args.get('sort_by', 'rating')
+    page = request.args.get('page', 1, type=int)
+    per_page = 12
+
+    # 筛选分类
     tools = [tool for tool in data['tools'] if tool['category'] == category_name]
+
+    # 价格类型筛选
+    if price_type:
+        tools = [tool for tool in tools if tool.get('price_type') == price_type]
+
+    # 评分筛选
+    if min_rating:
+        tools = [tool for tool in tools if tool.get('rating', 0) >= min_rating]
+
+    # 排序
+    if sort_by == 'rating':
+        tools.sort(key=lambda x: x.get('rating', 0), reverse=True)
+    elif sort_by == 'views':
+        tools.sort(key=lambda x: x.get('views', 0), reverse=True)
+    elif sort_by == 'updated_at':
+        tools.sort(key=lambda x: x.get('updated_at', ''), reverse=True)
+    elif sort_by == 'name':
+        tools.sort(key=lambda x: x['name'].lower())
+
+    # 分页
+    total_tools = len(tools)
+    total_pages = (total_tools + per_page - 1) // per_page
+    start = (page - 1) * per_page
+    end = start + per_page
+    tools_page = tools[start:end]
+
     categories = data['categories']
-    
-    # 获取当前分类信息
     current_category = next((cat for cat in categories if cat['name'] == category_name), None)
-    
+
+    # 获取所有价格类型
+    price_types = sorted(list(set(tool.get('price_type', '免费') for tool in data['tools'])))
+
     return render_template('category.html',
-                         tools=tools,
+                         tools=tools_page,
                          category_name=category_name,
                          current_category=current_category,
-                         categories=categories)
+                         categories=categories,
+                         price_types=price_types,
+                         total_tools=total_tools,
+                         page=page,
+                         total_pages=total_pages,
+                         current_price_type=price_type,
+                         current_min_rating=min_rating,
+                         current_sort_by=sort_by)
 
 @app.route('/tool/<int:tool_id>')
 def tool_detail(tool_id):
@@ -176,25 +217,72 @@ def tool_detail(tool_id):
 
 @app.route('/search')
 def search():
-    """搜索页面"""
+    """搜索页面 - 支持高级筛选、排序和分页"""
     query = request.args.get('q', '').strip()
+    category = request.args.get('category', '')
+    price_type = request.args.get('price_type', '')
+    min_rating = request.args.get('min_rating', type=float)
+    sort_by = request.args.get('sort_by', 'rating')  # rating, views, updated_at, name
+    page = request.args.get('page', 1, type=int)
+    per_page = 12
+
     data = load_data()
-    
+    results = data['tools'].copy()
+
+    # 文本搜索
     if query:
-        # 搜索工具名称、描述和标签
-        results = []
-        for tool in data['tools']:
-            if (query.lower() in tool['name'].lower() or 
-                query.lower() in tool['description'].lower() or
-                any(query.lower() in tag.lower() for tag in tool['tags'])):
-                results.append(tool)
-    else:
-        results = []
-    
+        results = [tool for tool in results if (
+            query.lower() in tool['name'].lower() or
+            query.lower() in tool['description'].lower() or
+            any(query.lower() in tag.lower() for tag in tool['tags'])
+        )]
+
+    # 分类筛选
+    if category:
+        results = [tool for tool in results if tool['category'] == category]
+
+    # 价格类型筛选
+    if price_type:
+        results = [tool for tool in results if tool.get('price_type') == price_type]
+
+    # 评分筛选
+    if min_rating:
+        results = [tool for tool in results if tool.get('rating', 0) >= min_rating]
+
+    # 排序
+    if sort_by == 'rating':
+        results.sort(key=lambda x: x.get('rating', 0), reverse=True)
+    elif sort_by == 'views':
+        results.sort(key=lambda x: x.get('views', 0), reverse=True)
+    elif sort_by == 'updated_at':
+        results.sort(key=lambda x: x.get('updated_at', ''), reverse=True)
+    elif sort_by == 'name':
+        results.sort(key=lambda x: x['name'].lower())
+
+    # 分页
+    total_results = len(results)
+    total_pages = (total_results + per_page - 1) // per_page
+    start = (page - 1) * per_page
+    end = start + per_page
+    results_page = results[start:end]
+
+    # 获取所有价格类型（用于筛选器）
+    price_types = sorted(list(set(tool.get('price_type', '免费') for tool in data['tools'])))
+
     return render_template('search.html',
                          query=query,
-                         results=results,
-                         categories=data['categories'])
+                         results=results_page,
+                         categories=data['categories'],
+                         price_types=price_types,
+                         total_results=total_results,
+                         page=page,
+                         total_pages=total_pages,
+                         per_page=per_page,
+                         # 当前筛选条件
+                         current_category=category,
+                         current_price_type=price_type,
+                         current_min_rating=min_rating,
+                         current_sort_by=sort_by)
 
 @app.route('/admin')
 def admin():

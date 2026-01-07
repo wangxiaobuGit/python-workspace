@@ -31,7 +31,7 @@
                 
                 <div class="mt-3">
                     <span class="badge bg-light text-dark fs-6">
-                        <i class="bi bi-collection me-1"></i>{{ tools|length }} 个工具
+                        <i class="bi bi-collection me-1"></i>{{ total_tools }} 个工具
                     </span>
                 </div>
             </div>
@@ -42,27 +42,58 @@
 <!-- 工具列表 -->
 <section class="py-5">
     <div class="container">
-        {% if tools %}
-        <!-- 排序和筛选 -->
+        {% if tools or current_price_type or current_min_rating %}
+        <!-- 筛选和排序 -->
         <div class="row mb-4">
-            <div class="col-md-6">
-                <div class="d-flex align-items-center">
-                    <label for="sortSelect" class="form-label me-2 mb-0">排序：</label>
-                    <select class="form-select form-select-sm" id="sortSelect" style="width: auto;">
-                        <option value="rating">按评分</option>
-                        <option value="name">按名称</option>
-                        <option value="featured">推荐优先</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-outline-secondary active" id="gridView">
-                        <i class="bi bi-grid-3x3-gap"></i>
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary" id="listView">
-                        <i class="bi bi-list"></i>
-                    </button>
+            <div class="col-md-12">
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                    <!-- 筛选器 -->
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <form method="GET" action="{{ url_for('category', category_name=category_name) }}" class="d-inline">
+                            <!-- 价格类型 -->
+                            <input type="hidden" name="sort_by" value="{{ current_sort_by }}">
+                            <input type="hidden" name="min_rating" value="{{ current_min_rating }}">
+                            <select class="form-select form-select-sm d-inline-block" name="price_type" onchange="this.form.submit()" style="width: auto;">
+                                <option value="">所有价格</option>
+                                {% for price in price_types %}
+                                <option value="{{ price }}" {% if current_price_type == price %}selected{% endif %}>{{ price }}</option>
+                                {% endfor %}
+                            </select>
+                        </form>
+
+                        <form method="GET" action="{{ url_for('category', category_name=category_name) }}" class="d-inline">
+                            <!-- 评分筛选 -->
+                            <input type="hidden" name="sort_by" value="{{ current_sort_by }}">
+                            <input type="hidden" name="price_type" value="{{ current_price_type }}">
+                            <select class="form-select form-select-sm d-inline-block" name="min_rating" onchange="this.form.submit()" style="width: auto;">
+                                <option value="">所有评分</option>
+                                <option value="4.5" {% if current_min_rating == 4.5 %}selected{% endif %}>4.5+</option>
+                                <option value="4.0" {% if current_min_rating == 4.0 %}selected{% endif %}>4.0+</option>
+                                <option value="3.5" {% if current_min_rating == 3.5 %}selected{% endif %}>3.5+</option>
+                            </select>
+                        </form>
+
+                        {% if current_price_type or current_min_rating %}
+                        <a href="{{ url_for('category', category_name=category_name) }}" class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-x-circle"></i> 清除筛选
+                        </a>
+                        {% endif %}
+                    </div>
+
+                    <!-- 排序 -->
+                    <form method="GET" action="{{ url_for('category', category_name=category_name) }}" class="d-inline">
+                        <input type="hidden" name="price_type" value="{{ current_price_type }}">
+                        <input type="hidden" name="min_rating" value="{{ current_min_rating }}">
+                        <div class="input-group input-group-sm" style="width: 200px;">
+                            <label class="input-group-text"><i class="bi bi-sort-down"></i></label>
+                            <select class="form-select" name="sort_by" onchange="this.form.submit()">
+                                <option value="rating" {% if current_sort_by == 'rating' %}selected{% endif %}>评分最高</option>
+                                <option value="views" {% if current_sort_by == 'views' %}selected{% endif %}>浏览最多</option>
+                                <option value="updated_at" {% if current_sort_by == 'updated_at' %}selected{% endif %}>最近更新</option>
+                                <option value="name" {% if current_sort_by == 'name' %}selected{% endif %}>名称排序</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -123,7 +154,46 @@
             </div>
             {% endfor %}
         </div>
-        
+
+        <!-- 分页 -->
+        {% if total_pages > 1 %}
+        <nav aria-label="工具列表分页" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <!-- 上一页 -->
+                <li class="page-item {% if page <= 1 %}disabled{% endif %}">
+                    <a class="page-link" href="{{ url_for('category', category_name=category_name, price_type=current_price_type, min_rating=current_min_rating, sort_by=current_sort_by, page=page-1) }}">
+                        <i class="bi bi-chevron-left"></i>
+                    </a>
+                </li>
+
+                <!-- 页码 -->
+                {% for p in range(1, total_pages + 1) %}
+                    {% if p == 1 or p == total_pages or (p >= page - 2 and p <= page + 2) %}
+                    <li class="page-item {% if p == page %}active{% endif %}">
+                        <a class="page-link" href="{{ url_for('category', category_name=category_name, price_type=current_price_type, min_rating=current_min_rating, sort_by=current_sort_by, page=p) }}">
+                            {{ p }}
+                        </a>
+                    </li>
+                    {% elif p == page - 3 or p == page + 3 %}
+                    <li class="page-item disabled">
+                        <span class="page-link">...</span>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+
+                <!-- 下一页 -->
+                <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
+                    <a class="page-link" href="{{ url_for('category', category_name=category_name, price_type=current_price_type, min_rating=current_min_rating, sort_by=current_sort_by, page=page+1) }}">
+                        <i class="bi bi-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+            <p class="text-center text-muted small">
+                第 {{ page }} / {{ total_pages }} 页，共 {{ total_tools }} 个工具
+            </p>
+        </nav>
+        {% endif %}
+
         <!-- 工具列表视图 -->
         <div class="d-none" id="toolsList">
             {% for tool in tools %}

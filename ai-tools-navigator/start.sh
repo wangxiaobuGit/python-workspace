@@ -16,7 +16,7 @@ pip install -r requirements.txt
 
 # 初始化GitHub热榜数据
 echo "🔄 初始化GitHub热榜数据..."
-python github_trending.py
+python3 github_trending.py
 
 # 启动Flask应用
 echo "🌐 启动Web服务器..."
@@ -24,4 +24,4 @@ echo "访问地址: http://localhost:12001"
 echo "管理后台: http://localhost:12001/admin"
 echo "按 Ctrl+C 停止服务器"
 
-python app.py
+python3 app.py

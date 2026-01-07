@@ -4,292 +4,300 @@
 
 {% block content %}
 <!-- 搜索头部 -->
-<section class="search-header py-5 bg-light">
+<section class="search-header py-4 bg-light">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ url_for('index') }}">首页</a></li>
+                <li class="breadcrumb-item active">搜索</li>
+            </ol>
+        </nav>
+
+        <h2 class="mb-3"><i class="bi bi-search me-2"></i>搜索 AI 工具</h2>
+
+        <!-- 搜索框 -->
+        <form method="GET" action="{{ url_for('search') }}" id="searchForm">
+            <div class="row g-3">
+                <div class="col-lg-8">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="q"
+                               placeholder="输入工具名称、功能或关键词..."
+                               value="{{ query }}" autofocus>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="bi bi-search me-1"></i>搜索
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- 主内容区 -->
+<section class="py-4">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="{{ url_for('index') }}">首页</a>
-                        </li>
-                        <li class="breadcrumb-item active">搜索</li>
-                    </ol>
-                </nav>
-                
-                <h1 class="mb-4">
-                    <i class="bi bi-search me-2"></i>搜索 AI 工具
-                </h1>
-                
-                <!-- 搜索框 -->
-                <div class="row">
-                    <div class="col-lg-8">
-                        <form method="GET" action="{{ url_for('search') }}">
-                            <div class="input-group input-group-lg">
-                                <input type="text" class="form-control" name="q" 
-                                       placeholder="输入工具名称、功能或关键词..." 
-                                       value="{{ query }}" autofocus>
-                                <button class="btn btn-primary" type="submit">
-                                    <i class="bi bi-search me-1"></i>搜索
-                                </button>
+            <!-- 左侧筛选器 -->
+            <div class="col-lg-3 mb-4">
+                <div class="card sticky-top" style="top: 20px;">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0"><i class="bi bi-funnel me-2"></i>筛选条件</h5>
+                    </div>
+                    <div class="card-body">
+                        <form method="GET" action="{{ url_for('search') }}" id="filterForm">
+                            <input type="hidden" name="q" value="{{ query }}">
+
+                            <!-- 分类筛选 -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">
+                                    <i class="bi bi-grid-3x3-gap me-1"></i>分类
+                                </label>
+                                <select class="form-select" name="category" onchange="this.form.submit()">
+                                    <option value="">全部分类</option>
+                                    {% for cat in categories %}
+                                    <option value="{{ cat.name }}"
+                                            {% if current_category == cat.name %}selected{% endif %}>
+                                        {{ cat.icon }} {{ cat.name }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <!-- 价格类型筛选 -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">
+                                    <i class="bi bi-tag me-1"></i>价格类型
+                                </label>
+                                <select class="form-select" name="price_type" onchange="this.form.submit()">
+                                    <option value="">全部类型</option>
+                                    {% for price in price_types %}
+                                    <option value="{{ price }}"
+                                            {% if current_price_type == price %}selected{% endif %}>
+                                        {{ price }}
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <!-- 评分筛选 -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">
+                                    <i class="bi bi-star me-1"></i>最低评分
+                                </label>
+                                <select class="form-select" name="min_rating" onchange="this.form.submit()">
+                                    <option value="">不限</option>
+                                    <option value="4.5" {% if current_min_rating == 4.5 %}selected{% endif %}>
+                                        4.5分及以上 ⭐
+                                    </option>
+                                    <option value="4.0" {% if current_min_rating == 4.0 %}selected{% endif %}>
+                                        4.0分及以上 ⭐
+                                    </option>
+                                    <option value="3.5" {% if current_min_rating == 3.5 %}selected{% endif %}>
+                                        3.5分及以上 ⭐
+                                    </option>
+                                </select>
+                            </div>
+
+                            <!-- 清除筛选 -->
+                            <div class="d-grid">
+                                <a href="{{ url_for('search', q=query) }}" class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-x-circle me-1"></i>清除筛选
+                                </a>
                             </div>
                         </form>
                     </div>
                 </div>
-                
-                {% if query %}
-                <div class="mt-3">
-                    <p class="text-muted">
-                        搜索 "<strong>{{ query }}</strong>" 的结果：
-                        <span class="badge bg-primary">{{ results|length }} 个工具</span>
-                    </p>
-                </div>
-                {% endif %}
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- 搜索结果 -->
-<section class="py-5">
-    <div class="container">
-        {% if query %}
-            {% if results %}
-            <!-- 结果统计和排序 -->
-            <div class="row mb-4">
-                <div class="col-md-6">
-                    <p class="text-muted mb-0">找到 {{ results|length }} 个相关工具</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <div class="d-flex align-items-center justify-content-md-end">
-                        <label for="sortSelect" class="form-label me-2 mb-0">排序：</label>
-                        <select class="form-select form-select-sm" id="sortSelect" style="width: auto;">
-                            <option value="relevance">相关性</option>
-                            <option value="rating">评分</option>
-                            <option value="name">名称</option>
-                        </select>
+            <!-- 右侧结果区 -->
+            <div class="col-lg-9">
+                {% if query or current_category or current_price_type or current_min_rating %}
+                    <!-- 结果信息栏 -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <p class="text-muted mb-0">
+                                找到 <strong class="text-primary">{{ total_results }}</strong> 个结果
+                                {% if query %}，关键词: "<strong>{{ query }}</strong>"{% endif %}
+                            </p>
+                        </div>
+                        <div>
+                            <!-- 排序 -->
+                            <form method="GET" action="{{ url_for('search') }}" class="d-inline">
+                                <input type="hidden" name="q" value="{{ query }}">
+                                <input type="hidden" name="category" value="{{ current_category }}">
+                                <input type="hidden" name="price_type" value="{{ current_price_type }}">
+                                <input type="hidden" name="min_rating" value="{{ current_min_rating }}">
+                                <input type="hidden" name="page" value="{{ page }}">
+
+                                <div class="input-group input-group-sm" style="width: 200px;">
+                                    <label class="input-group-text"><i class="bi bi-sort-down me-1"></i>排序</label>
+                                    <select class="form-select" name="sort_by" onchange="this.form.submit()">
+                                        <option value="rating" {% if current_sort_by == 'rating' %}selected{% endif %}>
+                                            评分最高
+                                        </option>
+                                        <option value="views" {% if current_sort_by == 'views' %}selected{% endif %}>
+                                            浏览最多
+                                        </option>
+                                        <option value="updated_at" {% if current_sort_by == 'updated_at' %}selected{% endif %}>
+                                            最近更新
+                                        </option>
+                                        <option value="name" {% if current_sort_by == 'name' %}selected{% endif %}>
+                                            名称排序
+                                        </option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- 搜索结果列表 -->
-            <div class="row g-4" id="searchResults">
-                {% for tool in results %}
-                <div class="col-lg-6 search-result-item" 
-                     data-rating="{{ tool.rating }}" 
-                     data-name="{{ tool.name }}">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <div class="d-flex align-items-start mb-3">
-                                <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="tool-logo me-3"
-                                     onerror="this.src='https://via.placeholder.com/48'">
-                                <div class="flex-grow-1">
-                                    <h5 class="card-title mb-1">
-                                        <a href="{{ url_for('tool_detail', tool_id=tool.id) }}" 
-                                           class="text-decoration-none">{{ tool.name }}</a>
-                                    </h5>
-                                    <div class="d-flex align-items-center gap-2 mb-2">
-                                        <span class="badge bg-primary">{{ tool.category }}</span>
-                                        {% if tool.is_featured %}
-                                        <span class="badge bg-warning text-dark">
-                                            <i class="bi bi-star-fill me-1"></i>推荐
-                                        </span>
-                                        {% endif %}
+
+                    {% if results %}
+                    <!-- 工具列表 -->
+                    <div class="row g-3">
+                        {% for tool in results %}
+                        <div class="col-md-6">
+                            <div class="card h-100 hover-shadow">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start mb-2">
+                                        <img src="{{ tool.logo }}" alt="{{ tool.name }}" class="me-3"
+                                             style="width: 48px; height: 48px; object-fit: contain; border-radius: 8px;"
+                                             onerror="this.src='https://via.placeholder.com/48'">
+                                        <div class="flex-grow-1">
+                                            <h5 class="card-title mb-1">
+                                                <a href="{{ url_for('tool_detail', tool_id=tool.id) }}"
+                                                   class="text-decoration-none text-dark">{{ tool.name }}</a>
+                                            </h5>
+                                            <div class="mb-2">
+                                                <span class="badge bg-primary">{{ tool.category }}</span>
+                                                {% if tool.get('price_type') %}
+                                                <span class="badge
+                                                    {% if tool.price_type == '免费' %}bg-success
+                                                    {% elif tool.price_type == '付费' %}bg-danger
+                                                    {% elif tool.price_type == '订阅制' %}bg-info
+                                                    {% else %}bg-warning text-dark
+                                                    {% endif %}">
+                                                    {{ tool.price_type }}
+                                                </span>
+                                                {% endif %}
+                                                {% if tool.is_featured %}
+                                                <span class="badge bg-warning text-dark">
+                                                    <i class="bi bi-star-fill"></i> 推荐
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                            <div class="rating">
+                                                {% for i in range(5) %}
+                                                    <i class="bi bi-star{% if i < tool.rating|int %}-fill text-warning{% endif %}"></i>
+                                                {% endfor %}
+                                                <small class="text-muted ms-1">{{ tool.rating }}</small>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="rating mb-2">
-                                        {% for i in range(5) %}
-                                            {% if i < tool.rating %}
-                                                <i class="bi bi-star-fill text-warning"></i>
-                                            {% else %}
-                                                <i class="bi bi-star text-muted"></i>
-                                            {% endif %}
+
+                                    <p class="card-text text-muted small mb-2">
+                                        {{ tool.description[:100] }}{% if tool.description|length > 100 %}...{% endif %}
+                                    </p>
+
+                                    <div class="mb-2">
+                                        {% for tag in tool.tags[:3] %}
+                                        <span class="badge bg-light text-dark me-1">#{{ tag }}</span>
                                         {% endfor %}
-                                        <span class="ms-1 text-muted">{{ tool.rating }}</span>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+                                        <a href="{{ url_for('tool_detail', tool_id=tool.id) }}"
+                                           class="btn btn-sm btn-outline-primary">详情</a>
+                                        <a href="{{ tool.url }}" target="_blank"
+                                           class="btn btn-sm btn-primary">访问</a>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <p class="card-text text-muted">
-                                {{ tool.description[:150] }}{% if tool.description|length > 150 %}...{% endif %}
-                            </p>
-                            
-                            <div class="mb-3">
-                                {% for tag in tool.tags[:4] %}
-                                <span class="badge bg-light text-dark me-1"># {{ tag }}</span>
-                                {% endfor %}
-                            </div>
-                            
-                            <div class="d-flex gap-2">
-                                <a href="{{ url_for('tool_detail', tool_id=tool.id) }}" 
-                                   class="btn btn-outline-primary flex-fill">
-                                    <i class="bi bi-info-circle me-1"></i>详情
-                                </a>
-                                <a href="{{ tool.url }}" target="_blank" class="btn btn-primary flex-fill">
-                                    <i class="bi bi-box-arrow-up-right me-1"></i>访问
-                                </a>
-                            </div>
                         </div>
+                        {% endfor %}
                     </div>
-                </div>
-                {% endfor %}
-            </div>
-            
-            {% else %}
-            <!-- 无结果 -->
-            <div class="text-center py-5">
-                <i class="bi bi-search display-1 text-muted"></i>
-                <h3 class="mt-3 text-muted">未找到相关工具</h3>
-                <p class="text-muted">尝试使用其他关键词或浏览分类</p>
-                
-                <div class="mt-4">
-                    <h5>搜索建议：</h5>
-                    <ul class="list-unstyled">
-                        <li class="text-muted">• 尝试使用更简单的关键词</li>
-                        <li class="text-muted">• 检查拼写是否正确</li>
-                        <li class="text-muted">• 使用同义词或相关词汇</li>
-                    </ul>
-                </div>
-                
-                <div class="mt-4">
-                    <a href="{{ url_for('index') }}" class="btn btn-primary me-2">
-                        <i class="bi bi-house me-1"></i>返回首页
-                    </a>
-                    <button class="btn btn-outline-primary" onclick="document.querySelector('input[name=q]').focus()">
-                        <i class="bi bi-search me-1"></i>重新搜索
-                    </button>
-                </div>
-            </div>
-            {% endif %}
-        {% else %}
-        <!-- 搜索提示 -->
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
+
+                    <!-- 分页 -->
+                    {% if total_pages > 1 %}
+                    <nav aria-label="搜索结果分页" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <!-- 上一页 -->
+                            <li class="page-item {% if page <= 1 %}disabled{% endif %}">
+                                <a class="page-link" href="{{ url_for('search', q=query, category=current_category, price_type=current_price_type, min_rating=current_min_rating, sort_by=current_sort_by, page=page-1) }}">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            <!-- 页码 -->
+                            {% for p in range(1, total_pages + 1) %}
+                                {% if p == 1 or p == total_pages or (p >= page - 2 and p <= page + 2) %}
+                                <li class="page-item {% if p == page %}active{% endif %}">
+                                    <a class="page-link" href="{{ url_for('search', q=query, category=current_category, price_type=current_price_type, min_rating=current_min_rating, sort_by=current_sort_by, page=p) }}">
+                                        {{ p }}
+                                    </a>
+                                </li>
+                                {% elif p == page - 3 or p == page + 3 %}
+                                <li class="page-item disabled">
+                                    <span class="page-link">...</span>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+
+                            <!-- 下一页 -->
+                            <li class="page-item {% if page >= total_pages %}disabled{% endif %}">
+                                <a class="page-link" href="{{ url_for('search', q=query, category=current_category, price_type=current_price_type, min_rating=current_min_rating, sort_by=current_sort_by, page=page+1) }}">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    {% endif %}
+
+                    {% else %}
+                    <!-- 无结果 -->
+                    <div class="text-center py-5">
+                        <i class="bi bi-search display-1 text-muted"></i>
+                        <h3 class="mt-3 text-muted">未找到相关工具</h3>
+                        <p class="text-muted">尝试调整筛选条件或使用其他关键词</p>
+                        <a href="{{ url_for('search', q=query) }}" class="btn btn-primary mt-3">
+                            <i class="bi bi-arrow-repeat me-1"></i>清除筛选重试
+                        </a>
+                    </div>
+                    {% endif %}
+
+                {% else %}
+                <!-- 搜索提示 -->
                 <div class="text-center py-5">
-                    <i class="bi bi-search display-1 text-muted"></i>
-                    <h3 class="mt-3">搜索 AI 工具</h3>
+                    <i class="bi bi-search display-1 text-primary"></i>
+                    <h3 class="mt-3">开始搜索</h3>
                     <p class="text-muted">输入关键词找到您需要的 AI 工具</p>
-                </div>
-                
-                <!-- 热门搜索 -->
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="mb-0">
-                            <i class="bi bi-fire me-2"></i>热门搜索
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex flex-wrap gap-2">
+
+                    <!-- 热门搜索 -->
+                    <div class="mt-4">
+                        <h5 class="mb-3">热门搜索：</h5>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center">
                             <a href="{{ url_for('search', q='ChatGPT') }}" class="btn btn-outline-primary btn-sm">ChatGPT</a>
                             <a href="{{ url_for('search', q='图像生成') }}" class="btn btn-outline-primary btn-sm">图像生成</a>
-                            <a href="{{ url_for('search', q='编程') }}" class="btn btn-outline-primary btn-sm">编程</a>
-                            <a href="{{ url_for('search', q='写作') }}" class="btn btn-outline-primary btn-sm">写作</a>
-                            <a href="{{ url_for('search', q='语音') }}" class="btn btn-outline-primary btn-sm">语音</a>
-                            <a href="{{ url_for('search', q='视频') }}" class="btn btn-outline-primary btn-sm">视频</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- 分类快速访问 -->
-                {% if categories %}
-                <div class="card mt-4">
-                    <div class="card-header">
-                        <h5 class="mb-0">
-                            <i class="bi bi-grid-3x3-gap me-2"></i>按分类浏览
-                        </h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="row g-3">
-                            {% for category in categories %}
-                            <div class="col-md-6">
-                                <a href="{{ url_for('category', category_name=category.name) }}" 
-                                   class="text-decoration-none">
-                                    <div class="d-flex align-items-center p-3 border rounded hover-bg-light">
-                                        <span class="fs-4 me-3">{{ category.icon }}</span>
-                                        <div>
-                                            <h6 class="mb-1">{{ category.name }}</h6>
-                                            <small class="text-muted">{{ category.description }}</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            {% endfor %}
+                            <a href="{{ url_for('search', q='编程') }}" class="btn btn-outline-primary btn-sm">编程助手</a>
+                            <a href="{{ url_for('search', q='视频') }}" class="btn btn-outline-primary btn-sm">视频处理</a>
+                            <a href="{{ url_for('search', q='写作') }}" class="btn btn-outline-primary btn-sm">写作助手</a>
+                            <a href="{{ url_for('search', q='语音') }}" class="btn btn-outline-primary btn-sm">语音合成</a>
                         </div>
                     </div>
                 </div>
                 {% endif %}
             </div>
         </div>
-        {% endif %}
     </div>
 </section>
 {% endblock %}
 
 {% block extra_scripts %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const sortSelect = document.getElementById('sortSelect');
-    
-    if (sortSelect) {
-        sortSelect.addEventListener('change', function() {
-            const sortBy = this.value;
-            const items = Array.from(document.querySelectorAll('.search-result-item'));
-            
-            items.sort((a, b) => {
-                switch(sortBy) {
-                    case 'rating':
-                        return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
-                    case 'name':
-                        return a.dataset.name.localeCompare(b.dataset.name);
-                    case 'relevance':
-                    default:
-                        return 0; // 保持原有顺序
-                }
-            });
-            
-            // 重新排列元素
-            const container = document.getElementById('searchResults');
-            items.forEach(item => container.appendChild(item));
-        });
-    }
-    
-    // 高亮搜索关键词
-    const query = '{{ query }}';
-    if (query) {
-        highlightSearchTerms(query);
-    }
-});
-
-function highlightSearchTerms(query) {
-    const terms = query.toLowerCase().split(' ');
-    const elements = document.querySelectorAll('.card-title, .card-text');
-    
-    elements.forEach(element => {
-        let html = element.innerHTML;
-        terms.forEach(term => {
-            if (term.length > 2) {
-                const regex = new RegExp(`(${term})`, 'gi');
-                html = html.replace(regex, '<mark>$1</mark>');
-            }
-        });
-        element.innerHTML = html;
-    });
-}
-
-// 搜索框自动完成
-document.querySelector('input[name="q"]').addEventListener('input', function() {
-    // 这里可以实现搜索建议功能
-});
-</script>
-
 <style>
-.hover-bg-light:hover {
-    background-color: #f8f9fa !important;
+.hover-shadow {
+    transition: all 0.3s ease;
 }
-
-mark {
-    background-color: #fff3cd;
-    padding: 0 2px;
-    border-radius: 2px;
+.hover-shadow:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px);
 }
 </style>
 {% endblock %}

@@ -6,10 +6,23 @@
       "description": "OpenAI 开发的强大对话式 AI 助手，支持文本生成、问答、编程等多种任务",
       "url": "https://chat.openai.com",
       "category": "写作助手",
-      "tags": ["对话", "文本生成", "编程", "问答"],
+      "tags": [
+        "对话",
+        "文本生成",
+        "编程",
+        "问答"
+      ],
       "rating": 4.8,
       "is_featured": true,
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 2,
@@ -17,10 +30,22 @@
       "description": "基于 Discord 的 AI 图像生成工具，能够创造出令人惊艳的艺术作品",
       "url": "https://www.midjourney.com",
       "category": "图像生成",
-      "tags": ["图像生成", "艺术", "创意"],
+      "tags": [
+        "图像生成",
+        "艺术",
+        "创意"
+      ],
       "rating": 4.7,
       "is_featured": true,
-      "logo": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/midjourney.png"
+      "logo": "https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/midjourney.png",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 3,
@@ -28,10 +53,22 @@
       "description": "GitHub 和 OpenAI 合作开发的 AI 编程助手，提供智能代码补全和建议",
       "url": "https://github.com/features/copilot",
       "category": "编程辅助",
-      "tags": ["编程", "代码补全", "开发工具"],
+      "tags": [
+        "编程",
+        "代码补全",
+        "开发工具"
+      ],
       "rating": 4.6,
       "is_featured": true,
-      "logo": "https://github.githubassets.com/images/modules/site/copilot/copilot.png"
+      "logo": "https://github.githubassets.com/images/modules/site/copilot/copilot.png",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 4,
@@ -39,10 +76,22 @@
       "description": "开源的文本到图像生成模型，支持本地部署和自定义训练",
       "url": "https://stability.ai/stable-diffusion",
       "category": "图像生成",
-      "tags": ["开源", "图像生成", "本地部署"],
+      "tags": [
+        "开源",
+        "图像生成",
+        "本地部署"
+      ],
       "rating": 4.5,
       "is_featured": false,
-      "logo": "https://stability.ai/favicon.ico"
+      "logo": "https://stability.ai/favicon.ico",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 5,
@@ -50,10 +99,22 @@
       "description": "集成在 Notion 中的 AI 写作助手，帮助用户提高写作效率",
       "url": "https://www.notion.so/product/ai",
       "category": "写作助手",
-      "tags": ["写作", "笔记", "生产力"],
+      "tags": [
+        "写作",
+        "笔记",
+        "生产力"
+      ],
       "rating": 4.4,
       "is_featured": false,
-      "logo": "https://www.notion.so/images/favicon.ico"
+      "logo": "https://www.notion.so/images/favicon.ico",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 6,
@@ -61,10 +122,22 @@
       "description": "OpenAI 开发的自动语音识别系统，支持多语言转录",
       "url": "https://openai.com/research/whisper",
       "category": "音频处理",
-      "tags": ["语音识别", "转录", "多语言"],
+      "tags": [
+        "语音识别",
+        "转录",
+        "多语言"
+      ],
       "rating": 4.6,
       "is_featured": false,
-      "logo": "https://openai.com/favicon.ico"
+      "logo": "https://openai.com/favicon.ico",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 7,
@@ -72,10 +145,22 @@
       "description": "Anthropic 开发的 AI 助手，擅长长文本处理和复杂推理",
       "url": "https://claude.ai",
       "category": "写作助手",
-      "tags": ["对话", "长文本", "推理"],
+      "tags": [
+        "对话",
+        "长文本",
+        "推理"
+      ],
       "rating": 4.5,
       "is_featured": true,
-      "logo": "https://claude.ai/favicon.ico"
+      "logo": "https://claude.ai/favicon.ico",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 8,
@@ -83,10 +168,22 @@
       "description": "OpenAI 最新的图像生成模型，能够理解复杂的文本描述",
       "url": "https://openai.com/dall-e-3",
       "category": "图像生成",
-      "tags": ["图像生成", "文本理解", "创意"],
+      "tags": [
+        "图像生成",
+        "文本理解",
+        "创意"
+      ],
       "rating": 4.7,
       "is_featured": true,
-      "logo": "https://openai.com/favicon.ico"
+      "logo": "https://openai.com/favicon.ico",
+      "price_type": "付费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 9,
@@ -94,10 +191,22 @@
       "description": "AI 驱动的代码编辑器，提供智能代码生成和重构功能",
       "url": "https://cursor.sh",
       "category": "编程辅助",
-      "tags": ["代码编辑器", "AI编程", "重构"],
+      "tags": [
+        "代码编辑器",
+        "AI编程",
+        "重构"
+      ],
       "rating": 4.3,
       "is_featured": false,
-      "logo": "https://cursor.sh/favicon.ico"
+      "logo": "https://cursor.sh/favicon.ico",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 10,
@@ -105,10 +214,22 @@
       "description": "先进的 AI 语音合成平台，能够生成逼真的人声",
       "url": "https://elevenlabs.io",
       "category": "音频处理",
-      "tags": ["语音合成", "配音", "多语言"],
+      "tags": [
+        "语音合成",
+        "配音",
+        "多语言"
+      ],
       "rating": 4.4,
       "is_featured": false,
-      "logo": "https://elevenlabs.io/favicon.ico"
+      "logo": "https://elevenlabs.io/favicon.ico",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 11,
@@ -116,10 +237,22 @@
       "description": "AI 搜索引擎，提供准确的答案和引用来源",
       "url": "https://www.perplexity.ai",
       "category": "搜索引擎",
-      "tags": ["搜索", "问答", "引用"],
+      "tags": [
+        "搜索",
+        "问答",
+        "引用"
+      ],
       "rating": 4.2,
       "is_featured": false,
-      "logo": "https://www.perplexity.ai/favicon.ico"
+      "logo": "https://www.perplexity.ai/favicon.ico",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 12,
@@ -127,10 +260,22 @@
       "description": "创意 AI 平台，提供视频编辑、图像生成等多种 AI 工具",
       "url": "https://runwayml.com",
       "category": "视频处理",
-      "tags": ["视频编辑", "创意", "多媒体"],
+      "tags": [
+        "视频编辑",
+        "创意",
+        "多媒体"
+      ],
       "rating": 4.3,
       "is_featured": false,
-      "logo": "https://runwayml.com/favicon.ico"
+      "logo": "https://runwayml.com/favicon.ico",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 13,
@@ -138,11 +283,24 @@
       "description": "阿里云推出的大语言模型，支持中文对话、文本生成、代码编写等功能",
       "url": "https://tongyi.aliyun.com",
       "category": "中文AI工具",
-      "tags": ["中文对话", "文本生成", "阿里云", "大语言模型"],
+      "tags": [
+        "中文对话",
+        "文本生成",
+        "阿里云",
+        "大语言模型"
+      ],
       "rating": 4.5,
       "is_featured": true,
       "logo": "https://img.alicdn.com/imgextra/i1/O1CN01KKes9j1YQq8zYzQqK_!!6000000003049-2-tps-512-512.png",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 14,
@@ -150,11 +308,24 @@
       "description": "智谱AI推出的对话式AI助手，基于GLM模型，支持中文理解和生成",
       "url": "https://chatglm.cn",
       "category": "中文AI工具",
-      "tags": ["中文对话", "GLM模型", "智谱AI", "问答"],
+      "tags": [
+        "中文对话",
+        "GLM模型",
+        "智谱AI",
+        "问答"
+      ],
       "rating": 4.4,
       "is_featured": true,
       "logo": "https://chatglm.cn/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 15,
@@ -162,11 +333,24 @@
       "description": "月之暗面推出的智能助手，支持超长文本处理和多轮对话",
       "url": "https://kimi.moonshot.cn",
       "category": "中文AI工具",
-      "tags": ["长文本", "对话", "月之暗面", "智能助手"],
+      "tags": [
+        "长文本",
+        "对话",
+        "月之暗面",
+        "智能助手"
+      ],
       "rating": 4.6,
       "is_featured": true,
       "logo": "https://kimi.moonshot.cn/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 16,
@@ -174,11 +358,24 @@
       "description": "阿里云推出的AI模型社区，提供丰富的预训练模型和开发工具",
       "url": "https://modelscope.cn",
       "category": "开发者工具",
-      "tags": ["模型社区", "预训练模型", "开发工具", "阿里云"],
+      "tags": [
+        "模型社区",
+        "预训练模型",
+        "开发工具",
+        "阿里云"
+      ],
       "rating": 4.3,
       "is_featured": false,
       "logo": "https://modelscope.cn/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 17,
@@ -186,11 +383,24 @@
       "description": "百度推出的知识增强大语言模型，支持文学创作、商业文案、数理推算等",
       "url": "https://yiyan.baidu.com",
       "category": "中文AI工具",
-      "tags": ["百度", "知识增强", "文学创作", "商业文案"],
+      "tags": [
+        "百度",
+        "知识增强",
+        "文学创作",
+        "商业文案"
+      ],
       "rating": 4.2,
       "is_featured": true,
       "logo": "https://nlp-eb.cdn.bcebos.com/logo/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 18,
@@ -198,11 +408,24 @@
       "description": "中国领先的年轻人文化社区和视频平台，涵盖动画、游戏、科技等内容",
       "url": "https://www.bilibili.com",
       "category": "视频平台",
-      "tags": ["视频", "弹幕", "二次元", "学习"],
+      "tags": [
+        "视频",
+        "弹幕",
+        "二次元",
+        "学习"
+      ],
       "rating": 4.7,
       "is_featured": false,
       "logo": "https://www.bilibili.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 19,
@@ -210,11 +433,23 @@
       "description": "抖音短视频平台网页版，随时随地刷短视频",
       "url": "https://www.douyin.com",
       "category": "视频平台",
-      "tags": ["短视频", "娱乐", "创作"],
+      "tags": [
+        "短视频",
+        "娱乐",
+        "创作"
+      ],
       "rating": 4.5,
       "is_featured": false,
       "logo": "https://www.douyin.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 20,
@@ -222,11 +457,24 @@
       "description": "YouTube视频平台镜像站点，观看海外视频内容",
       "url": "https://www.youtube.com",
       "category": "视频平台",
-      "tags": ["视频", "海外", "教育", "娱乐"],
+      "tags": [
+        "视频",
+        "海外",
+        "教育",
+        "娱乐"
+      ],
       "rating": 4.8,
       "is_featured": false,
       "logo": "https://www.youtube.com/favicon.ico",
-      "region": "海外"
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 21,
@@ -234,11 +482,24 @@
       "description": "网易云音乐网页版，发现音乐，遇见美好",
       "url": "https://music.163.com",
       "category": "音乐平台",
-      "tags": ["音乐", "歌单", "评论", "发现"],
+      "tags": [
+        "音乐",
+        "歌单",
+        "评论",
+        "发现"
+      ],
       "rating": 4.6,
       "is_featured": false,
       "logo": "https://music.163.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 22,
@@ -246,11 +507,24 @@
       "description": "腾讯QQ音乐网页版，海量正版音乐在线试听",
       "url": "https://y.qq.com",
       "category": "音乐平台",
-      "tags": ["音乐", "正版", "腾讯", "在线"],
+      "tags": [
+        "音乐",
+        "正版",
+        "腾讯",
+        "在线"
+      ],
       "rating": 4.5,
       "is_featured": false,
       "logo": "https://y.qq.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 23,
@@ -258,11 +532,24 @@
       "description": "全球领先的音乐流媒体平台",
       "url": "https://open.spotify.com",
       "category": "音乐平台",
-      "tags": ["音乐", "流媒体", "播客", "全球"],
+      "tags": [
+        "音乐",
+        "流媒体",
+        "播客",
+        "全球"
+      ],
       "rating": 4.7,
       "is_featured": false,
       "logo": "https://open.spotify.com/favicon.ico",
-      "region": "海外"
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 24,
@@ -270,11 +557,24 @@
       "description": "蚂蚁集团推出的专业云端知识库，支持文档协作和知识管理",
       "url": "https://www.yuque.com",
       "category": "文档笔记",
-      "tags": ["知识库", "文档协作", "蚂蚁", "团队"],
+      "tags": [
+        "知识库",
+        "文档协作",
+        "蚂蚁",
+        "团队"
+      ],
       "rating": 4.4,
       "is_featured": false,
       "logo": "https://www.yuque.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 25,
@@ -282,11 +582,24 @@
       "description": "腾讯推出的在线文档协作平台，支持多人实时编辑",
       "url": "https://docs.qq.com",
       "category": "文档笔记",
-      "tags": ["在线文档", "协作", "腾讯", "实时编辑"],
+      "tags": [
+        "在线文档",
+        "协作",
+        "腾讯",
+        "实时编辑"
+      ],
       "rating": 4.3,
       "is_featured": false,
       "logo": "https://docs.qq.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 26,
@@ -294,11 +607,24 @@
       "description": "集笔记、数据库、项目管理于一体的全能工作空间",
       "url": "https://www.notion.so",
       "category": "文档笔记",
-      "tags": ["笔记", "数据库", "项目管理", "工作空间"],
+      "tags": [
+        "笔记",
+        "数据库",
+        "项目管理",
+        "工作空间"
+      ],
       "rating": 4.6,
       "is_featured": false,
       "logo": "https://www.notion.so/images/favicon.ico",
-      "region": "海外"
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 27,
@@ -306,11 +632,23 @@
       "description": "一站式快递查询平台，支持全国主要快递公司",
       "url": "https://www.kuaidi100.com",
       "category": "生活实用",
-      "tags": ["快递查询", "物流", "生活服务"],
+      "tags": [
+        "快递查询",
+        "物流",
+        "生活服务"
+      ],
       "rating": 4.2,
       "is_featured": false,
       "logo": "https://www.kuaidi100.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 28,
@@ -318,11 +656,24 @@
       "description": "中国铁路客户服务中心，火车票预订官方网站",
       "url": "https://www.12306.cn",
       "category": "生活实用",
-      "tags": ["火车票", "铁路", "出行", "官方"],
+      "tags": [
+        "火车票",
+        "铁路",
+        "出行",
+        "官方"
+      ],
       "rating": 4.0,
       "is_featured": false,
       "logo": "https://www.12306.cn/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 29,
@@ -330,11 +681,24 @@
       "description": "支付宝网页版，便民服务和移动支付平台",
       "url": "https://www.alipay.com",
       "category": "生活实用",
-      "tags": ["支付", "便民服务", "蚂蚁", "金融"],
+      "tags": [
+        "支付",
+        "便民服务",
+        "蚂蚁",
+        "金融"
+      ],
       "rating": 4.5,
       "is_featured": false,
       "logo": "https://www.alipay.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 30,
@@ -342,11 +706,24 @@
       "description": "全球最大的代码托管平台和开发者社区",
       "url": "https://github.com",
       "category": "开发者工具",
-      "tags": ["代码托管", "开源", "协作", "开发者"],
+      "tags": [
+        "代码托管",
+        "开源",
+        "协作",
+        "开发者"
+      ],
       "rating": 4.8,
       "is_featured": true,
       "logo": "https://github.com/favicon.ico",
-      "region": "海外"
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
     },
     {
       "id": 31,
@@ -354,11 +731,24 @@
       "description": "中国领先的软件开发平台，提供Git代码托管服务",
       "url": "https://gitee.com",
       "category": "开发者工具",
-      "tags": ["代码托管", "Git", "开源", "中国"],
+      "tags": [
+        "代码托管",
+        "Git",
+        "开源",
+        "中国"
+      ],
       "rating": 4.3,
       "is_featured": false,
       "logo": "https://gitee.com/favicon.ico",
-      "region": "中国"
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
     },
     {
       "id": 32,
@@ -366,11 +756,1265 @@
       "description": "全球最大的程序员问答社区",
       "url": "https://stackoverflow.com",
       "category": "开发者工具",
-      "tags": ["问答", "编程", "社区", "技术"],
+      "tags": [
+        "问答",
+        "编程",
+        "社区",
+        "技术"
+      ],
       "rating": 4.7,
       "is_featured": false,
       "logo": "https://stackoverflow.com/favicon.ico",
-      "region": "海外"
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Google Gemini",
+      "description": "Google 推出的多模态 AI 模型，支持文本、图像、视频理解和生成",
+      "url": "https://gemini.google.com",
+      "category": "写作助手",
+      "tags": [
+        "多模态",
+        "对话",
+        "Google",
+        "AI助手"
+      ],
+      "rating": 4.6,
+      "is_featured": true,
+      "logo": "https://www.gstatic.com/lamda/images/gemini_favicon_f069958c85030456e93de685481c559f160ea06b.png",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文",
+        "日文",
+        "韩文"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Jasper AI",
+      "description": "专业的 AI 营销文案写作工具，支持多种文案模板和语言",
+      "url": "https://www.jasper.ai",
+      "category": "写作助手",
+      "tags": [
+        "营销文案",
+        "内容创作",
+        "商业写作"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://www.jasper.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Copy.ai",
+      "description": "AI 驱动的营销文案生成工具，快速创建广告、社交媒体内容",
+      "url": "https://www.copy.ai",
+      "category": "写作助手",
+      "tags": [
+        "营销",
+        "文案",
+        "社交媒体"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://www.copy.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "豆包",
+      "description": "字节跳动推出的 AI 智能助手，支持对话、创作、学习等多种场景",
+      "url": "https://www.doubao.com",
+      "category": "中文AI工具",
+      "tags": [
+        "字节跳动",
+        "对话",
+        "智能助手",
+        "创作"
+      ],
+      "rating": 4.4,
+      "is_featured": true,
+      "logo": "https://www.doubao.com/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "讯飞星火",
+      "description": "科大讯飞推出的认知大模型，支持多轮对话、文本生成、代码编写",
+      "url": "https://xinghuo.xfyun.cn",
+      "category": "中文AI工具",
+      "tags": [
+        "科大讯飞",
+        "认知大模型",
+        "对话",
+        "代码"
+      ],
+      "rating": 4.3,
+      "is_featured": true,
+      "logo": "https://xinghuo.xfyun.cn/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Leonardo.ai",
+      "description": "专业的 AI 艺术创作平台，提供精细的图像生成和编辑功能",
+      "url": "https://leonardo.ai",
+      "category": "图像生成",
+      "tags": [
+        "艺术创作",
+        "图像生成",
+        "设计"
+      ],
+      "rating": 4.5,
+      "is_featured": true,
+      "logo": "https://leonardo.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Adobe Firefly",
+      "description": "Adobe 推出的 AI 创意工具，集成在 Creative Cloud 中",
+      "url": "https://www.adobe.com/products/firefly.html",
+      "category": "图像生成",
+      "tags": [
+        "Adobe",
+        "创意",
+        "设计",
+        "商业"
+      ],
+      "rating": 4.4,
+      "is_featured": true,
+      "logo": "https://www.adobe.com/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Ideogram",
+      "description": "擅长文字渲染的 AI 图像生成工具，适合制作海报和设计",
+      "url": "https://ideogram.ai",
+      "category": "图像生成",
+      "tags": [
+        "文字渲染",
+        "海报",
+        "设计"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://ideogram.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "文心一格",
+      "description": "百度推出的 AI 艺术和创意辅助平台，支持中文提示词",
+      "url": "https://yige.baidu.com",
+      "category": "图像生成",
+      "tags": [
+        "百度",
+        "艺术创作",
+        "中文",
+        "设计"
+      ],
+      "rating": 4.1,
+      "is_featured": false,
+      "logo": "https://yige.baidu.com/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "即梦AI",
+      "description": "国内优质的 AI 图像生成平台，支持多种风格和模型",
+      "url": "https://jimeng.jianying.com",
+      "category": "图像生成",
+      "tags": [
+        "图像生成",
+        "中文",
+        "多风格"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://jimeng.jianying.com/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Sora",
+      "description": "OpenAI 推出的文本生成视频模型，创造逼真的视频内容",
+      "url": "https://openai.com/sora",
+      "category": "视频处理",
+      "tags": [
+        "视频生成",
+        "OpenAI",
+        "文本转视频"
+      ],
+      "rating": 4.8,
+      "is_featured": true,
+      "logo": "https://openai.com/favicon.ico",
+      "region": "海外",
+      "price_type": "付费",
+      "status": "beta",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Pika",
+      "description": "简单易用的 AI 视频生成工具，支持文本和图像转视频",
+      "url": "https://pika.art",
+      "category": "视频处理",
+      "tags": [
+        "视频生成",
+        "简单易用",
+        "创意"
+      ],
+      "rating": 4.4,
+      "is_featured": true,
+      "logo": "https://pika.art/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "HeyGen",
+      "description": "AI 数字人视频生成平台，支持多语言和定制化虚拟形象",
+      "url": "https://www.heygen.com",
+      "category": "视频处理",
+      "tags": [
+        "数字人",
+        "视频生成",
+        "多语言"
+      ],
+      "rating": 4.5,
+      "is_featured": true,
+      "logo": "https://www.heygen.com/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 46,
+      "name": "剪映",
+      "description": "字节跳动推出的全能视频剪辑工具，集成 AI 功能",
+      "url": "https://www.capcut.cn",
+      "category": "视频处理",
+      "tags": [
+        "视频编辑",
+        "字节跳动",
+        "剪辑",
+        "AI"
+      ],
+      "rating": 4.6,
+      "is_featured": false,
+      "logo": "https://www.capcut.cn/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Codeium",
+      "description": "免费的 AI 代码补全工具，支持 70+ 编程语言",
+      "url": "https://codeium.com",
+      "category": "编程辅助",
+      "tags": [
+        "代码补全",
+        "免费",
+        "多语言"
+      ],
+      "rating": 4.4,
+      "is_featured": true,
+      "logo": "https://codeium.com/favicon.ico",
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Tabnine",
+      "description": "AI 驱动的代码补全工具，支持本地部署和隐私保护",
+      "url": "https://www.tabnine.com",
+      "category": "编程辅助",
+      "tags": [
+        "代码补全",
+        "隐私",
+        "本地部署"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://www.tabnine.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Replit AI",
+      "description": "集成在 Replit 中的 AI 编程助手，支持在线协作开发",
+      "url": "https://replit.com/ai",
+      "category": "编程辅助",
+      "tags": [
+        "在线IDE",
+        "协作",
+        "AI助手"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://replit.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "通义灵码",
+      "description": "阿里云推出的智能编码助手，支持中文注释和代码生成",
+      "url": "https://tongyi.aliyun.com/lingma",
+      "category": "编程辅助",
+      "tags": [
+        "阿里云",
+        "中文",
+        "代码生成"
+      ],
+      "rating": 4.3,
+      "is_featured": true,
+      "logo": "https://img.alicdn.com/imgextra/i1/O1CN01KKes9j1YQq8zYzQqK_!!6000000003049-2-tps-512-512.png",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文",
+        "英文"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Murf AI",
+      "description": "专业的 AI 配音工具，提供多种声音和语言选择",
+      "url": "https://murf.ai",
+      "category": "音频处理",
+      "tags": [
+        "配音",
+        "语音合成",
+        "多语言"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://murf.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "Suno AI",
+      "description": "AI 音乐生成工具，根据文本描述创作完整的歌曲",
+      "url": "https://suno.ai",
+      "category": "音频处理",
+      "tags": [
+        "音乐生成",
+        "创作",
+        "AI作曲"
+      ],
+      "rating": 4.6,
+      "is_featured": true,
+      "logo": "https://suno.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Udio",
+      "description": "高质量的 AI 音乐创作平台，支持多种风格和语言",
+      "url": "https://www.udio.com",
+      "category": "音频处理",
+      "tags": [
+        "音乐创作",
+        "AI作曲",
+        "多风格"
+      ],
+      "rating": 4.5,
+      "is_featured": true,
+      "logo": "https://www.udio.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 54,
+      "name": "You.com",
+      "description": "AI 驱动的搜索引擎，提供个性化搜索和 AI 助手",
+      "url": "https://you.com",
+      "category": "搜索引擎",
+      "tags": [
+        "AI搜索",
+        "个性化",
+        "助手"
+      ],
+      "rating": 4.1,
+      "is_featured": false,
+      "logo": "https://you.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "秘塔AI搜索",
+      "description": "国内优质的 AI 搜索引擎，无广告、直达答案",
+      "url": "https://metaso.cn",
+      "category": "搜索引擎",
+      "tags": [
+        "AI搜索",
+        "中文",
+        "无广告"
+      ],
+      "rating": 4.4,
+      "is_featured": true,
+      "logo": "https://metaso.cn/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Grammarly",
+      "description": "AI 驱动的英文写作助手，提供语法检查和写作建议",
+      "url": "https://www.grammarly.com",
+      "category": "写作助手",
+      "tags": [
+        "英文写作",
+        "语法检查",
+        "写作优化"
+      ],
+      "rating": 4.5,
+      "is_featured": false,
+      "logo": "https://www.grammarly.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Canva AI",
+      "description": "集成 AI 功能的设计平台，支持快速创建各类设计",
+      "url": "https://www.canva.com",
+      "category": "图像生成",
+      "tags": [
+        "设计",
+        "模板",
+        "易用"
+      ],
+      "rating": 4.6,
+      "is_featured": false,
+      "logo": "https://www.canva.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Remove.bg",
+      "description": "AI 自动抠图工具，一键去除图片背景",
+      "url": "https://www.remove.bg",
+      "category": "图像生成",
+      "tags": [
+        "抠图",
+        "去背景",
+        "图像处理"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://www.remove.bg/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Gamma",
+      "description": "AI 驱动的演示文稿和文档创建工具",
+      "url": "https://gamma.app",
+      "category": "写作助手",
+      "tags": [
+        "演示文稿",
+        "文档",
+        "设计"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://gamma.app/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Anthropic Claude Code",
+      "description": "Claude 的代码编辑器版本，专注于编程任务",
+      "url": "https://claude.ai/code",
+      "category": "编程辅助",
+      "tags": [
+        "Claude",
+        "代码编辑",
+        "AI助手"
+      ],
+      "rating": 4.5,
+      "is_featured": true,
+      "logo": "https://claude.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Humata AI",
+      "description": "AI 文档分析工具，快速理解和总结长文档",
+      "url": "https://www.humata.ai",
+      "category": "写作助手",
+      "tags": [
+        "文档分析",
+        "PDF",
+        "总结"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://www.humata.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Tome",
+      "description": "AI 驱动的故事讲述和演示工具",
+      "url": "https://tome.app",
+      "category": "写作助手",
+      "tags": [
+        "演示",
+        "故事",
+        "创意"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://tome.app/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "腾讯混元",
+      "description": "腾讯推出的大语言模型，支持多轮对话和内容创作",
+      "url": "https://hunyuan.tencent.com",
+      "category": "中文AI工具",
+      "tags": [
+        "腾讯",
+        "大模型",
+        "对话"
+      ],
+      "rating": 4.3,
+      "is_featured": true,
+      "logo": "https://hunyuan.tencent.com/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "MiniMax",
+      "description": "MiniMax 推出的对话式 AI，支持文本、语音交互",
+      "url": "https://www.minimaxi.com",
+      "category": "中文AI工具",
+      "tags": [
+        "对话",
+        "语音",
+        "多模态"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://www.minimaxi.com/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "ChatDOC",
+      "description": "AI 文档对话工具，上传 PDF 即可智能问答",
+      "url": "https://chatdoc.com",
+      "category": "写作助手",
+      "tags": [
+        "文档分析",
+        "PDF",
+        "问答"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://chatdoc.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Descript",
+      "description": "AI 驱动的视频和音频编辑工具，支持文本编辑视频",
+      "url": "https://www.descript.com",
+      "category": "视频处理",
+      "tags": [
+        "视频编辑",
+        "音频编辑",
+        "文本编辑"
+      ],
+      "rating": 4.5,
+      "is_featured": false,
+      "logo": "https://www.descript.com/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Framer AI",
+      "description": "集成 AI 的网站设计和开发工具",
+      "url": "https://www.framer.com",
+      "category": "编程辅助",
+      "tags": [
+        "网站设计",
+        "无代码",
+        "原型"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://www.framer.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Synthesia",
+      "description": "AI 视频生成平台，使用虚拟主播创建专业视频",
+      "url": "https://www.synthesia.io",
+      "category": "视频处理",
+      "tags": [
+        "视频生成",
+        "虚拟主播",
+        "商业"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://www.synthesia.io/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Krisp",
+      "description": "AI 降噪工具，消除通话中的背景噪音",
+      "url": "https://krisp.ai",
+      "category": "音频处理",
+      "tags": [
+        "降噪",
+        "通话",
+        "音频处理"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://krisp.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "商汤日日新",
+      "description": "商汤科技推出的多模态大模型平台",
+      "url": "https://www.sensetime.com/cn/product-detail?categoryId=100218",
+      "category": "中文AI工具",
+      "tags": [
+        "商汤",
+        "多模态",
+        "大模型"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://www.sensetime.com/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "360智脑",
+      "description": "360 推出的大语言模型，支持对话和内容生成",
+      "url": "https://ai.360.cn",
+      "category": "中文AI工具",
+      "tags": [
+        "360",
+        "对话",
+        "内容生成"
+      ],
+      "rating": 4.0,
+      "is_featured": false,
+      "logo": "https://ai.360.cn/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "天工AI",
+      "description": "昆仑万维推出的AI助手，支持搜索和对话",
+      "url": "https://www.tiangong.cn",
+      "category": "中文AI工具",
+      "tags": [
+        "搜索",
+        "对话",
+        "AI助手"
+      ],
+      "rating": 4.1,
+      "is_featured": false,
+      "logo": "https://www.tiangong.cn/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "海螺AI",
+      "description": "MiniMax 推出的多模态 AI 助手",
+      "url": "https://hailuo.ai",
+      "category": "中文AI工具",
+      "tags": [
+        "多模态",
+        "对话",
+        "图像理解"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://hailuo.ai/favicon.ico",
+      "region": "中国",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "中文"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Hugging Face",
+      "description": "开源 AI 模型和数据集社区平台",
+      "url": "https://huggingface.co",
+      "category": "开发者工具",
+      "tags": [
+        "开源",
+        "模型库",
+        "社区",
+        "开发"
+      ],
+      "rating": 4.7,
+      "is_featured": true,
+      "logo": "https://huggingface.co/favicon.ico",
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Replicate",
+      "description": "云端运行 AI 模型的平台，无需配置环境",
+      "url": "https://replicate.com",
+      "category": "开发者工具",
+      "tags": [
+        "云端运行",
+        "AI模型",
+        "API"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://replicate.com/favicon.ico",
+      "region": "海外",
+      "price_type": "按量付费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Otter.ai",
+      "description": "AI 会议记录和转录工具，自动生成会议纪要",
+      "url": "https://otter.ai",
+      "category": "音频处理",
+      "tags": [
+        "会议记录",
+        "转录",
+        "笔记"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://otter.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Writesonic",
+      "description": "AI 内容创作平台，支持文章、广告、社交媒体内容",
+      "url": "https://writesonic.com",
+      "category": "写作助手",
+      "tags": [
+        "内容创作",
+        "营销",
+        "SEO"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://writesonic.com/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "Character.AI",
+      "description": "与 AI 角色对话的平台，支持创建个性化 AI 角色",
+      "url": "https://character.ai",
+      "category": "写作助手",
+      "tags": [
+        "角色扮演",
+        "对话",
+        "娱乐"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://character.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "Poe",
+      "description": "Quora 推出的多模型 AI 聊天平台，整合多个 AI 助手",
+      "url": "https://poe.com",
+      "category": "写作助手",
+      "tags": [
+        "多模型",
+        "聊天",
+        "整合平台"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://poe.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Fireflies.ai",
+      "description": "AI 会议助手，自动记录、转录和总结会议",
+      "url": "https://fireflies.ai",
+      "category": "音频处理",
+      "tags": [
+        "会议助手",
+        "转录",
+        "总结"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://fireflies.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Speechify",
+      "description": "AI 文本转语音工具，支持多种语言和声音",
+      "url": "https://speechify.com",
+      "category": "音频处理",
+      "tags": [
+        "文本转语音",
+        "阅读",
+        "辅助工具"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://speechify.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文",
+        "中文"
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Quillbot",
+      "description": "AI 改写和润色工具，帮助优化文本表达",
+      "url": "https://quillbot.com",
+      "category": "写作助手",
+      "tags": [
+        "改写",
+        "润色",
+        "优化"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://quillbot.com/favicon.ico",
+      "region": "海外",
+      "price_type": "Freemium",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Pictory",
+      "description": "AI 视频创建工具，将文本转换为短视频",
+      "url": "https://pictory.ai",
+      "category": "视频处理",
+      "tags": [
+        "视频生成",
+        "文本转视频",
+        "营销"
+      ],
+      "rating": 4.2,
+      "is_featured": false,
+      "logo": "https://pictory.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "订阅制",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 84,
+      "name": "Luma AI",
+      "description": "3D 扫描和建模工具，使用手机创建 3D 模型",
+      "url": "https://lumalabs.ai",
+      "category": "图像生成",
+      "tags": [
+        "3D建模",
+        "扫描",
+        "AR"
+      ],
+      "rating": 4.4,
+      "is_featured": false,
+      "logo": "https://lumalabs.ai/favicon.ico",
+      "region": "海外",
+      "price_type": "免费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Deepgram",
+      "description": "企业级语音识别 API，高精度实时转录",
+      "url": "https://deepgram.com",
+      "category": "音频处理",
+      "tags": [
+        "语音识别",
+        "API",
+        "企业级"
+      ],
+      "rating": 4.3,
+      "is_featured": false,
+      "logo": "https://deepgram.com/favicon.ico",
+      "region": "海外",
+      "price_type": "按量付费",
+      "status": "active",
+      "updated_at": "2026-01-07",
+      "views": 0,
+      "language_support": [
+        "英文"
+      ]
     }
   ],
   "categories": [
